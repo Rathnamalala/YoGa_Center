@@ -822,11 +822,11 @@ a:focus {
     width: 100%;
     margin: 45px 0;
     padding: 90px 0;
-    background: linear-gradient(rgba(14, 82, 41, 0.7), rgba(19, 123, 31, 0.7)), url(../img/discount-bg.png);
+    background: linear-gradient(rgba(14, 82, 41, 0.7), rgba(19, 123, 31, 0.7)), url(../img/discount-bg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain cover;
 }
 
 .discount .container {
