@@ -267,7 +267,7 @@ a:focus {
 
 
 /**********************************/
-/*********** hero section CSS **********/
+/*********** Hero Section CSS **********/
 /**********************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;600&display=swap');
@@ -280,16 +280,21 @@ a:focus {
     overflow: hidden;
     color: #ffffff;
     font-family: 'Lora', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #hero-video {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 0%; /* Moves the video slightly to the right */
+    width: 100%; /* Slightly larger to maintain coverage */
     height: 100%;
     object-fit: cover;
     z-index: -1;
+   /* filter: brightness(0.9);  Adds subtle dimming for readability */
 }
 
 .hero::before {
@@ -299,7 +304,7 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35); /* Dark overlay for readability */
+    background: linear-gradient(135deg, rgba(0, 30, 20, 0.5), rgba(0, 0, 0, 0.5)); /* Soothing gradient overlay */
     z-index: 0;
 }
 
@@ -310,7 +315,7 @@ a:focus {
 }
 
 .hero .hero-text {
-    max-width: 500px;
+    max-width: 600px;
     padding-left: 75px;
     color: #ffffff;
     z-index: 1;
@@ -318,71 +323,74 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+    text-align: left;
 }
 
 .hero .hero-text h1 {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #e6ebf1;
+    margin-bottom: 15px;
+    color: #e6f1ed;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for emphasis */
 }
 
 .hero .hero-text p {
-    color: #d1e8d1;
-    font-size: 20px;
-    line-height: 1.6;
+    color: #d4edd9;
+    font-size: 22px;
+    line-height: 1.8;
     margin-bottom: 30px;
 }
 
 .hero .hero-btn .btn {
-    padding: 12px 30px;
-    font-size: 15px;
+    padding: 14px 35px;
+    font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(135deg, #134921, #feb47b);
+    background: linear-gradient(135deg, #1a6457, #9ec79d);
     border: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    border-radius: 30px;
+    transition: all 0.4s ease;
     margin-right: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero .hero-btn .btn:hover {
-    color: #ff7e5f;
+    color: #1a6457;
     background: #ffffff;
-    box-shadow: 0px 4px 15px rgba(255, 126, 95, 0.3);
+    box-shadow: 0px 6px 20px rgba(30, 100, 87, 0.5);
 }
 
 .hero .hero-image img {
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .hero .hero-image img:hover {
-    transform: scale(1.05); /* Subtle zoom effect */
+    transform: scale(1.08); /* Gentle zoom effect */
 }
 
 /* Responsive Styles */
 @media (max-width: 991.98px) {
     .hero .hero-text h1 {
-        font-size: 40px;
+        font-size: 48px;
     }
     .hero .hero-text p {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 @media (max-width: 767.98px) {
     .hero .hero-text {
-        padding: 0 15px;
+        padding: 0 20px;
         text-align: center;
     }
     .hero .hero-text h1 {
-        font-size: 35px;
+        font-size: 36px;
     }
     .hero .hero-text p {
-        font-size: 16px;
+        font-size: 18px;
     }
     .hero .hero-btn {
         text-align: center;
@@ -391,14 +399,14 @@ a:focus {
 
 @media (max-width: 575.98px) {
     .hero .hero-text h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
     .hero .hero-text p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .hero .hero-btn .btn {
-        padding: 10px 20px;
-        font-size: 13px;
+        padding: 12px 25px;
+        font-size: 14px;
     }
 }
 
@@ -515,6 +523,10 @@ a:focus {
 /*******************************/
 /********** About CSS **********/
 /*******************************/
+
+              /*******************************/
+/********** About CSS **********/
+/*******************************/
 .about {
     position: relative;
     width: 100%;
@@ -567,6 +579,9 @@ a:focus {
         height: auto;
     }
 }
+
+
+
 
 
 /*******************************/
@@ -879,241 +894,186 @@ a:focus {
 /*******************************/
 /********* Pricing CSS *********/
 /*******************************/
+/* Price Section Styles */
 .price {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
 }
 
-.price .price-item {
-    position: relative;
-    margin-bottom: 30px;
+/* Section Header Styles */
+.section-header {
+    margin-bottom: 50px;
 }
 
-.price .price-header,
-.price .price-body,
-.price .price-footer {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background: #e7ffec9d;
-    overflow: hidden;
-}
-
-.price .price-header {
-    padding: 30px;
-    background: #62b858;
-    color: #3c4831;
-}
-
-.price .price-item.featured-item .price-header {
-    background: #274d0c;
-    color: #d5f7c9;
-}
-
-.price .price-status {
-    margin-top: -30px;
-    text-align: right;
-}
-
-.price .price-status span {
-    position: relative;
-    display: inline-block;
-    height: 30px;
-    right: -30px;
-    padding: 7px 10px;
-    text-align: center;
-    color: #3a4831;
-    font-size: 14px;
-    line-height: 14px;
-    background: #d4f7c9;
-}
-
-.price .price-title h2 {
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.price .price-prices h2 {
-    font-size: 45px;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-.price .price-prices h2 small {
-    position: absolute;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 9px;
-    margin-left: -12px;
-}
-
-.price .price-prices h2 span {
-    margin-left: 1px;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.price .price-item.featured-item h2 {
-    color: #e0f7c9;
-}
-
-.price .price-body {
-    padding: 25px 0 20px 0;
-    border: 1px solid rgba(21, 121, 73, 0.07);
-    border-bottom: none;
-}
-
-.price .price-description ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.price .price-description ul li {
-    padding: 7px;
-    border-bottom: 1px solid rgba(7, 39, 12, 0.07);
-    color: #082c0b;
-}
-
-.price .price-description ul li:last-child {
-    border: none;
-}
-
-.price .price-action {
-    border: 1px solid rgba(0, 0, 0, .07);
-    border-top: none;
-}
-
-.price .price-action a.btn {
-    margin-bottom: 30px;
-    padding: 12px 20px;
-    color: #314831;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 0;
-    background: #F7CAC9;
-    transition: .3s;
-}
-
-.price .price-action a:hover,
-.price .price-item.featured-item .price-action a {
-    color: #F7CAC9;
-    background: #343148;
-}
-
-.price .price-item.featured-item .price-action a:hover {
-    color: #343148;
-    background: #F7CAC9;
-}
-
-
-/*******************************/
-/*********** Team CSS **********/
-/*******************************/
-.team {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.team .team-item {
-    position: relative;
-    margin-bottom: 30px;
-    padding: 15px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, .07);
-}
-
-.team .team-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.team .team-img img {
-    position: relative;
-    width: 100%;
-}
-
-.team .team-social {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s;
-}
-
-.team .team-social a {
-    position: relative;
-    margin: 0 3px;
-    margin-top: 100px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
+.section-subtitle {
     font-size: 16px;
-    color: #F7CAC9;
-    background: #343148;
-    opacity: 0;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
-.team .team-social a:hover {
-    color: #343148;
-    background: #F7CAC9;
-}
-
-
-.team .team-item:hover .team-social {
-    background: rgba(256, 256, 256, .5);
-}
-
-.team .team-item:hover .team-social a:first-child {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s 0s;
-}
-
-.team .team-item:hover .team-social a:nth-child(2) {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s .1s;
-}
-
-.team .team-item:hover .team-social a:nth-child(3) {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s .2s;
-}
-
-.team .team-item:hover .team-social a:nth-child(4) {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s .3s;
-}
-
-.team .team-text {
-    position: relative;
-    padding: 25px 15px 10px 15px;
-    text-align: center;
-    background: #ffffff;
-}
-
-.team .team-text h2 {
-    font-size: 18px;
+.section-title {
+    font-size: 36px;
     font-weight: 600;
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
-.team .team-text p {
-    margin: 0;
+/* Price Item Styles */
+.price-column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
+
+.price-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.price-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.price-item .price-header {
+    margin-bottom: 20px;
+}
+
+.price-title h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.price-prices h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ff5722;
+}
+
+.price-prices h2 small {
+    font-size: 18px;
+    color: #777;
+}
+
+.price-prices h2 span {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Price Body Styles */
+.price-description {
+    margin-bottom: 25px;
+}
+
+.price-description ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.price-description li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.price-description li i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ff5722;
+}
+
+/* Price Footer Styles */
+.price-footer {
+    text-align: center;
+}
+
+.price-action .btn {
+    padding: 12px 25px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.price-action .btn:hover {
+    background-color: #e64a19;
+    transform: translateY(-5px);
+}
+
+/* Featured Item Styles */
+.featured-item .price-header {
+    border-bottom: 2px solid #ff5722;
+    padding-bottom: 15px;
+}
+
+.featured-item .price-status {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .price-item {
+        margin-bottom: 30px;
+    }
+    .price-column {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .price-prices h2 {
+        font-size: 24px;
+    }
+
+    .price-description li {
+        font-size: 13px;
+    }
+
+    .price-item {
+        max-width: 100%;
+        padding: 25px;
+    }
+}
+
+
 
 
 /*******************************/
@@ -2038,5 +1998,132 @@ a:focus {
     .footer .copyright .col-md-6:last-child p {
         margin: 5px 0;
         text-align: center;
+    }
+}
+
+/*************** Gallery Section ***************/
+.gallery-section {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.gallery-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.gallery-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff5722;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;  /* Hide the overflow to create sliding effect */
+}
+
+.swiper-wrapper {
+    display: flex;
+    animation: slide 40s linear infinite; /* Slower, continuous animation */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0;  /* Prevent the images from shrinking */
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 280px;  /* Set uniform width */
+    height: 200px;  /* Set uniform height */
+    object-fit: cover;  /* Ensures the image covers the frame proportionally */
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Slight scaling and shadow on hover */
+.swiper-slide:hover img {
+    transform: scale(1.08);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;  /* Slight opacity change on hover to enhance the effect */
+}
+
+/* Continuous animation with slower transition */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+.gallery-footer {
+    margin-top: 25px;
+}
+
+.gallery-footer .btn {
+    padding: 14px 24px;
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-footer .btn:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-heading {
+        font-size: 28px;
+    }
+    .swiper-slide img {
+        max-width: 220px;
+        height: 160px;  /* Maintain proportional height for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-heading {
+        font-size: 24px;
+    }
+    .gallery-footer .btn {
+        font-size: 14px;
+        padding: 10px 18px;
     }
 }
