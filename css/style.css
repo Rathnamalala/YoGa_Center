@@ -607,7 +607,7 @@ a:focus {
 .service .service-icon i {
     position: relative;
     font-size: 50px;
-    color: #0a3114;
+    color: #fafbfa;
     z-index: 3;
 }
 
