@@ -46,7 +46,7 @@ function changeSlide() {
 setInterval(changeSlide, 3000); // Change slide every 3 seconds
 
 document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new swiper('.swiper-container', {
         loop: true,
         slidesPerView: 3, // Show 3 images at a time
         spaceBetween: 15, // Space between images
@@ -77,42 +77,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 (function ($) {
     "use strict";
 
     // Initiate WOW.js for animations
     new WOW().init();
 
-    // Back to top button with IntersectionObserver
-    const backToTop = document.querySelector('.back-to-top');
-    const header = document.querySelector('header');
-    const observer = new IntersectionObserver(
-        (entries) => {
-            if (!entries[0].isIntersecting) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        },
-        { threshold: 0.1 }
-    );
-    observer.observe(header); // Observe header visibility
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Sticky Navbar with throttled scroll
-    let lastScrollY = 0;
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > lastScrollY) {
-            navbar.classList.add('nav-sticky');
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn('slow');
         } else {
-            navbar.classList.remove('nav-sticky');
+            $('.back-to-top').fadeOut('slow');
         }
-        lastScrollY = window.scrollY;
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+    // Sticky Navbar with throttled scroll
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.navbar').addClass('nav-sticky');
+        } else {
+            $('.navbar').removeClass('nav-sticky');
+        }
     });
 
     // Dropdown on mouse hover
@@ -178,24 +170,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Portfolio filter with CSS Grid
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    const portfolioButtons = document.querySelectorAll('#portfolio-filter li');
 
-    portfolioButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const activeFilter = document.querySelector('#portfolio-filter .filter-active');
-            activeFilter?.classList.remove('filter-active');
-            button.classList.add('filter-active');
 
-            const filter = button.dataset.filter;
-            portfolioItems.forEach((item) => {
-                if (filter === '*' || item.matches(filter)) {
-                    item.style.display = 'grid';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
+    
+
+    
 })(jQuery);
+
+
