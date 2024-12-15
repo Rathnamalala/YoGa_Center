@@ -1475,7 +1475,9 @@ a:focus {
     list-style-type: none;
 }
 
-
+.contact-text {
+     font-weight: bold;
+}
 
 /*******************************/
 /******* Single Post CSS *******/
