@@ -798,9 +798,11 @@ a:focus {
 /*******************************/
 /********** Class CSS **********/
 /*******************************/
+/* Class Section */
 .class {
     position: relative;
     padding: 45px 0 15px 0;
+    font-family: 'Arial', sans-serif; /* Clean font */
 }
 
 .class #class-filter {
@@ -815,14 +817,14 @@ a:focus {
     cursor: pointer;
     display: inline-block;
     margin: 5px;
-    padding: 6px 12px;
+    padding: 8px 16px; /* Larger padding for better clickability */
     color: #299551;
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 0;
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: 600;
+    border-radius: 30px; /* Rounded corners for a modern feel */
     background: none;
-    border: 1px solid #0d2c19;
-    transition: .3s;
+    border: 2px solid #0d2c19;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .class #class-filter li:hover,
@@ -835,7 +837,9 @@ a:focus {
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
-    transition: .3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px; /* Round corners for a sleek look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .class .class-wrap {
@@ -849,47 +853,50 @@ a:focus {
 
 .class .class-img img {
     position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 10px; /* Smooth rounded corners */
 }
 
 .class .class-text {
     position: relative;
     padding: 30px 30px 25px 30px;
-    border-right: 1px solid rgba(0, 0, 0, .07);
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
-    border-left: 1px solid rgba(0, 0, 0, .07);
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
 }
 
 .class .class-text h2 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700; /* Bold title */
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .class .class-teacher {
     position: relative;
-    height: 40px;
-    margin-top: -50px;
+    height: 50px;
+    margin-top: -60px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 0 10px rgba(7, 35, 10, 0.1);
-    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px; /* Rounded teacher container */
 }
 
 .class .class-teacher img {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background: #F7CAC9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .class .class-teacher h3 {
-    width: calc(100% - 95px);
-    font-size: 15px;
+    width: calc(100% - 105px);
+    font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 15px;
     white-space: nowrap;
@@ -897,18 +904,17 @@ a:focus {
 }
 
 .class .class-teacher a {
-    width: 40px;
-    height: 40px;
-    padding: 0 0 3px 1px;
+    width: 50px;
+    height: 50px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    font-weight: 100;
+    font-size: 35px;
     color: #0d3526;
-    background: #F7CAC9;
-    border-radius: 40px;
-    transition: .3s;
+    background: #cef7c9;
+    border-radius: 50%;
+    transition: background 0.3s, color 0.3s;
 }
 
 .class .class-wrap:hover .class-teacher a {
@@ -916,25 +922,46 @@ a:focus {
     background: #314839;
 }
 
-.class .class-meta {
-    position: relative;
-    display: flex;
-    align-items: center;
+.class .class-text button {
+    position: absolute;
+    left: 275px;  /* Position the button 15px from the right */
+    bottom: 7px; /* Position the button 15px from the bottom */
+    padding: 8px 15px;  /* Slightly larger button */
+    font-size: 14px;  /* Larger font size */
+    background-color: #299551;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.class .class-meta p {
-    margin: 0;
-    font-size: 14px;
+.class .class-text button:hover {
+    background-color: #0d3526;  /* Darker shade on hover */
+    transform: scale(1.1);  /* Slightly grow the button */
 }
 
-.class .class-meta p i {
-    margin-right: 5px;
-    color: #343148;
+.class .class-item:hover {
+    transform: translateY(-5px);  /* Subtle lift effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
 }
 
-.class .class-meta p:first-child {
-    margin-right: 10px;
+@media (max-width: 768px) {
+    .class .class-text {
+        padding: 20px;
+    }
+    .class .class-text h2 {
+        font-size: 18px; /* Adjust title size for mobile */
+    }
+    .class .class-teacher h3 {
+        font-size: 14px;
+    }
+    .class .class-text button {
+        font-size: 12px;  /* Smaller button for mobile */
+        padding: 6px 12px;
+    }
 }
+
 
 
 
@@ -2238,61 +2265,19 @@ hr {
 
 
 
-.review-form-section {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
 
-.review-form-section h2 {
-    text-align: center;
-}
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
 
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
 
-button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.review {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
 
-.review h3 {
-    margin: 0;
-    font-size: 1.2em;
-}
 
-.review p {
-    font-size: 1em;
-    margin: 10px 0;
-}
 
-.review small {
-    font-size: 0.8em;
-    color: #555;
-}
+
+
+
+
+
+
+
+
