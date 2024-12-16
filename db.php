@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost"; // or the IP of your host if you're using a remote DB
-$username = "root"; // your MySQL username
+$username = " root"; // your MySQL username
 $password = ""; // your MySQL password (empty for local server)
 $dbname = "reviews_db"; // your database name
 
