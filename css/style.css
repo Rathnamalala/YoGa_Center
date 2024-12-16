@@ -270,7 +270,7 @@ a:focus {
 
 
 /**********************************/
-/*********** Enhanced Hero Section CSS **********/
+/***********Hero Section CSS **********/
 /**********************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@400;500&family=Prata&display=swap');
@@ -293,7 +293,7 @@ a:focus {
 #hero-video {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -579,7 +579,7 @@ a:focus {
     position: relative;
     font-size: 16px;
     font-weight: 600;
-    background: #1d7c0e;
+    background: linear-gradient(135deg, #1c5e18, #73a872);
 }
 
 .section-header p::after {
@@ -606,67 +606,326 @@ a:focus {
     }
 }
 
-
-/*******************************/
-/********** About CSS **********/
-/*******************************/
-
-              /*******************************/
-/********** About CSS **********/
-/*******************************/
 .about {
     position: relative;
-    width: 100%;
-    padding: 45px 0;
+    padding: 60px 0;
+    background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+}
+
+/*******************************/
+/********** About Section *******/
+/*******************************/
+.about {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
 }
 
 .about .section-header {
     margin-bottom: 30px;
-    margin-left: 0;
+    text-align: center;
+}
+
+.about .section-header p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #154412;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.about .section-header h2 {
+    font-size: 32px;
+    color: #082c0b;
 }
 
 .about .about-img {
     position: relative;
-    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "main main"
+        "left right";
+    gap: 10px;
 }
 
-.about .about-img img {
+/* Collage Styling */
+.about-img.collage {
+    display: grid;
+    grid-template-areas: 
+        "main main"
+        "left right";
+    grid-gap: 10px; /* Spacing between images */
     position: relative;
+}
+
+.about-img .collage-item {
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for professional look */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img .collage-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures images fit properly */
+    display: block;
+    transition: transform 0.3s ease;
 }
 
+/* Layout for Images */
+.about-img .collage-item:nth-child(1) {
+    grid-area: main;
+}
+
+.about-img .collage-item:nth-child(2) {
+    grid-area: left;
+}
+
+.about-img .collage-item:nth-child(3) {
+    grid-area: right;
+}
+
+/* Hover Effects */
+.about-img .collage-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .about-img.collage {
+        grid-template-areas: 
+            "main"
+            "left"
+            "right";
+    }
+}
 .about .about-text p {
     font-size: 16px;
+    line-height: 1.8;
     color: #082c0b;
 }
 
 .about .about-text a.btn {
-    position: relative;
+    display: inline-block;
     margin-top: 15px;
-    padding: 12px 20px;
+    padding: 12px 25px;
     font-size: 14px;
     font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    color: #e0adad;
-    background: #17540f;
-    border-radius: 0;
-    transition: .3s;
+    color: #fff;
+    background: linear-gradient(135deg, #154412, #4f784e);
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .about .about-text a.btn:hover {
-    color: #343148;
-    background: #F7CAC9;
+    background: #f7cac9;
+    color: #154412;
 }
 
-@media (max-width: 767.98px) {
-    .about .about-img {
-        margin-bottom: 30px;
-        height: auto;
+/*******************************/
+/***** Mission & Vision *******/
+/*******************************/
+.mission-vision {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #154412, #4f784e);
+    color: #ffffff;
+    border-radius: 15px;
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mission-vision .section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%; /* Limits width on larger screens */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.mission-vision .section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.mission-vision .section h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.mission-vision .section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e0e0e0;
+    z-index: 2;
+    position: relative;
+}
+
+.mission-vision .section .icon {
+    font-size: 50px;
+    color: #e0adad;
+    margin-bottom: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+.mission-vision .section .btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #f4a261;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.mission-vision .section .btn:hover {
+    background: #e76f51;
+}
+
+/*******************************/
+/********** Responsive *********/
+/*******************************/
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;
+    }
+
+    .mission-vision .section {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
 
+
+/*******************************/
+/******** Experiences **********/
+/*******************************/
+.experiences {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.experiences h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #154412;
+    margin-bottom: 20px;
+}
+
+.experiences p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.experiences img {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.experiences img:hover {
+    transform: scale(1.03);
+}
+
+/*******************************/
+/********** Slider *************/
+/*******************************/
+.photo-slider {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.photo-slider .slider-item {
+    flex: 0 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.photo-slider .slider-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*******************************/
+/********** Responsive *********/
+/*******************************/
+@media (max-width: 768px) {
+    .about .about-img {
+        grid-template-areas:
+            "main"
+            "left"
+            "right";
+    }
+
+    .about .about-text p {
+        font-size: 14px;
+    }
+
+    .mission-vision h3 {
+        font-size: 20px;
+    }
+
+    .mission-vision p {
+        font-size: 14px;
+    }
+
+    .experiences h3 {
+        font-size: 20px;
+    }
+
+    .photo-slider .slider-item {
+        width: 90%;
+    }
+}
 
 
 
@@ -677,7 +936,25 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
-    background: #f4f9f4; /* Light greenish-white for yoga vibe */
+    background: url('../img/yoga1.jpg') no-repeat center center; /* Update the path to your local image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    color: #ffffff; /* Text color to contrast with background */
+    overflow: hidden; /* Ensures the overlay stays contained */
+   
+}
+.service:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust this for brightness: 0.5 is darker */
+    z-index: 1; /* Keeps it behind the content */
+}
+.service .container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
 }
 
 .service .service-item {
@@ -686,8 +963,7 @@ a:focus {
     text-align: center;
     margin-bottom: 30px;
     padding: 30px;
-    border: 1px solid rgba(0, 0, 0, .07);
-    background: #ffffff; /* White card background */
+    background: rgba(255, 255, 255, 0.711); /* White card with slight transparency */
     border-radius: 15px; /* Smooth rounded corners */
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -733,7 +1009,7 @@ a:focus {
     display: block;
     width: 80px;
     height: 80px;
-    background: #a5d6a7; /* Soft green for pulse */
+    background: #7fb981; /* Soft green for pulse */
     border-radius: 50%;
     animation: pulse-border 2000ms ease-out infinite;
 }
@@ -773,14 +1049,14 @@ a:focus {
 
 .service .section-header {
     margin-bottom: 45px;
-    color: #388e3c;
+    color: #0e260f;
 }
 
 .service .section-header p {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #d8e0d9;
+    color: #e9efea;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
@@ -789,6 +1065,7 @@ a:focus {
     font-size: 28px;
     font-weight: 800;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 
@@ -1014,7 +1291,7 @@ a:focus {
     font-weight: 600;
     letter-spacing: 1px;
     color: #F7CAC9;
-    background: #3c4831;
+    background: linear-gradient(135deg, #154412, #4f784e);
     border-radius: 0;
     transition: .3s;
 }
@@ -1031,19 +1308,20 @@ a:focus {
 /* Price Section Styles */
 .price {
     padding: 80px 0;
-    background-color: #f8f8f8;
+    background-color: #f4f9f4; /* Light green background */
     font-family: 'Poppins', sans-serif;
 }
 
 /* Section Header Styles */
 .section-header {
     margin-bottom: 50px;
+    
 }
 
 .section-subtitle {
     font-size: 16px;
     font-weight: 500;
-    color: #333;
+    color: #e0eae5; /* Dark green */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -1052,7 +1330,7 @@ a:focus {
 .section-title {
     font-size: 36px;
     font-weight: 600;
-    color: #222;
+    color: #204529; /* Darker green */
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -1078,13 +1356,16 @@ a:focus {
     max-width: 380px;
     width: 100%;
     margin: 0 auto;
+    border: 1px solid #b2d8c2; /* Light green border */
 }
+
 
 .price-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
+/* Header Styles */
 .price-item .price-header {
     margin-bottom: 20px;
 }
@@ -1092,19 +1373,19 @@ a:focus {
 .price-title h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: #204529;
     text-transform: capitalize;
 }
 
 .price-prices h2 {
     font-size: 30px;
     font-weight: 700;
-    color: #ff5722;
+    color: #34a853; /* Dark green accent */
 }
 
 .price-prices h2 small {
     font-size: 18px;
-    color: #777;
+    color: #666;
 }
 
 .price-prices h2 span {
@@ -1121,7 +1402,7 @@ a:focus {
     list-style-type: none;
     padding: 0;
     font-size: 14px;
-    color: #555;
+    color: #333;
 }
 
 .price-description li {
@@ -1129,12 +1410,13 @@ a:focus {
     display: flex;
     align-items: center;
     font-weight: 500;
+    color: #2a5d43;
 }
 
 .price-description li i {
     margin-right: 10px;
     font-size: 18px;
-    color: #ff5722;
+    color: #34a853;
 }
 
 /* Price Footer Styles */
@@ -1144,7 +1426,7 @@ a:focus {
 
 .price-action .btn {
     padding: 12px 25px;
-    background-color: #ff5722;
+    background: linear-gradient(135deg, #154412, #4f784e);
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -1155,18 +1437,18 @@ a:focus {
 }
 
 .price-action .btn:hover {
-    background-color: #e64a19;
+    background-color: #2a5d43;
     transform: translateY(-5px);
 }
 
 /* Featured Item Styles */
 .featured-item .price-header {
-    border-bottom: 2px solid #ff5722;
+    border-bottom: 2px solid #34a853;
     padding-bottom: 15px;
 }
 
 .featured-item .price-status {
-    background-color: #ff5722;
+    background-color: #34a853;
     color: #fff;
     padding: 5px 15px;
     font-size: 14px;
@@ -1206,6 +1488,7 @@ a:focus {
         padding: 25px;
     }
 }
+
 
 
 
@@ -2211,7 +2494,7 @@ hr {
 
 .gallery-footer .btn {
     padding: 14px 24px;
-    background-color: #0ba122;
+    background: linear-gradient(135deg, #154412, #4f784e);
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
