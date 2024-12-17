@@ -1071,7 +1071,6 @@ a:focus {
 
 
 
-
 /*******************************/
 /********** Class CSS **********/
 /*******************************/
@@ -1101,7 +1100,8 @@ a:focus {
     border-radius: 30px; /* Rounded corners for a modern feel */
     background: none;
     border: 2px solid #0d2c19;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    backface-visibility: hidden; /* Optimize GPU performance */
 }
 
 .class #class-filter li:hover,
@@ -1114,9 +1114,16 @@ a:focus {
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 15px; /* Round corners for a sleek look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optimized shadow */
+    transform: translate3d(0, 0, 0); /* Ensure GPU acceleration */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backface-visibility: hidden; /* Avoid performance issues with 3D transforms */
+}
+
+.class .class-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
 }
 
 .class .class-wrap {
@@ -1134,14 +1141,16 @@ a:focus {
     height: 100%;
     object-fit: cover;
     border-radius: 10px; /* Smooth rounded corners */
+    backface-visibility: hidden; /* Performance optimization */
+    will-change: transform; /* Performance hint for potential transform changes */
 }
 
 .class .class-text {
     position: relative;
-    padding: 30px 30px 25px 30px;
+    padding: 30px;
     border-radius: 10px;
     background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07); /* Subtle shadow */
 }
 
 .class .class-text h2 {
@@ -1159,7 +1168,7 @@ a:focus {
     display: flex;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optimized shadow */
     border-radius: 30px; /* Rounded teacher container */
 }
 
@@ -1168,7 +1177,7 @@ a:focus {
     height: 50px;
     border-radius: 50%;
     background: #F7CAC9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .class .class-teacher h3 {
@@ -1191,7 +1200,8 @@ a:focus {
     color: #0d3526;
     background: #cef7c9;
     border-radius: 50%;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    will-change: background, color;
 }
 
 .class .class-wrap:hover .class-teacher a {
@@ -1201,8 +1211,8 @@ a:focus {
 
 .class .class-text button {
     position: absolute;
-    left: 275px;  /* Position the button 15px from the right */
-    bottom: 7px; /* Position the button 15px from the bottom */
+    left: 275px;  /* Position the button */
+    bottom: 7px; /* Position the button */
     padding: 8px 15px;  /* Slightly larger button */
     font-size: 14px;  /* Larger font size */
     background-color: #299551;
@@ -1210,17 +1220,13 @@ a:focus {
     border: none;
     border-radius: 30px; /* Rounded button */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    will-change: background-color, transform;
 }
 
 .class .class-text button:hover {
     background-color: #0d3526;  /* Darker shade on hover */
     transform: scale(1.1);  /* Slightly grow the button */
-}
-
-.class .class-item:hover {
-    transform: translateY(-5px);  /* Subtle lift effect */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
 }
 
 @media (max-width: 768px) {
@@ -1238,7 +1244,6 @@ a:focus {
         padding: 6px 12px;
     }
 }
-
 
 
 
