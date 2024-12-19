@@ -286,19 +286,19 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    text-align: center; /* Ensure content is centered on smaller screens */
 }
 
 /* Background Video */
 #hero-video {
     position: absolute;
     top: 0;
-    left: 0%;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(1) blur(0px); /* Subtle blur for smoothness */
+    filter: brightness(1.3); /* Adjust brightness for better readability */
     transition: filter 1.5s ease-in-out;
 }
 
@@ -310,7 +310,7 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 50, 25, 0.5), rgba(0, 0, 0, 0.7)); /* More vivid gradient */
+    background: linear-gradient(135deg, rgba(0, 50, 25, 0.5), rgba(0, 0, 0, 0.7));
     z-index: 0;
 }
 
@@ -320,22 +320,22 @@ a:focus {
     z-index: 1;
     position: relative;
     animation: fadeSlideIn 1.5s ease-out forwards;
-    left: -40px;
 }
 
 /* Hero Text */
 .hero .hero-text {
     max-width: 700px;
-    padding-left: 50px;
+    margin: 0 auto;
+    padding: 10px 20px;
     color: #ffffff;
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
     opacity: 0;
     transform: translateY(50px);
     animation: textSlideIn 1.2s ease-out forwards;
+    
 }
 
 .hero .hero-text h1 {
@@ -345,24 +345,25 @@ a:focus {
     color: #f1f8f5;
     line-height: 1.3;
     text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.7);
-    animation: textFadeIn 1.6s ease-in-out forwards;
 }
 
 .hero .hero-text p {
     color: #d9f6e1;
-    font-size: 22px;
-    line-height: 1.8;
+    font-size: 20px;
+    line-height: 1.6;
     margin-bottom: 30px;
-    opacity: -2;
+    opacity: 0;
     animation: textFadeIn 2s ease-in-out forwards;
     animation-delay: 0.4s;
 }
 
 /* Buttons */
 .hero .hero-btn {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap; /* Ensure buttons wrap on small screens */
+    gap: 10px;
+    justify-content: center;
     opacity: 0;
     transform: translateY(40px);
     animation: fadeSlideIn 2.5s ease-out forwards;
@@ -370,53 +371,24 @@ a:focus {
 }
 
 .hero .hero-btn .btn {
-    padding: 14px 40px;
-    font-size: 18px;
+    padding: 12px 30px;
+    font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(135deg, #1c5e18, #73a872);
+    background: linear-gradient(135deg, #144111, #476347);
     border: none;
     border-radius: 30px;
     transition: all 0.6s ease;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    z-index: 1;
 }
 
 .hero .hero-btn .btn:hover {
     background: #ffffff;
     color: #1a6457;
-    box-shadow: 0px 15px 25px rgba(30, 100, 87, 0.5);
-    transform: scale(1.05); /* Smooth scaling effect */
-}
-
-.hero .hero-btn .btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: 0;
-    transition: left 0.6s ease;
-}
-
-.hero .hero-btn .btn:hover::before {
-    left: 0;
-}
-
-/* Responsive Image (Optional) */
-.hero .hero-image img {
-    max-width: 100%;
-    height: auto;
-    transform: scale(0.95);
-    transition: transform 0.6s ease;
-}
-
-.hero .hero-image img:hover {
-    transform: scale(1.1); /* Gentle zoom effect */
+    box-shadow: 0px 12px 20px rgba(30, 100, 87, 0.4);
+    transform: scale(1.05);
 }
 
 /* Keyframes for Smooth Animation */
@@ -454,46 +426,53 @@ a:focus {
 /* Responsive Styles */
 @media (max-width: 991.98px) {
     .hero .hero-text h1 {
-        font-size: 48px;
-    }
-    .hero .hero-text p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .hero .hero-text {
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    .hero .hero-text h1 {
         font-size: 36px;
     }
 
     .hero .hero-text p {
         font-size: 18px;
     }
-
-    .hero .hero-btn {
-        justify-content: center;
-    }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+    .hero {
+        padding: 70px 0; /* Adjust top padding for smaller screens */
+    }
+
+    .hero .hero-text {
+        text-align: center; /* Center align text for smaller devices */
+        padding: 0 15px;
+    }
+
     .hero .hero-text h1 {
-        font-size: 30px;
+        font-size: 28px;
+        line-height: 1.4;
     }
 
     .hero .hero-text p {
         font-size: 16px;
     }
+}
+
+@media (max-width: 575.98px) {
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero .hero-text p {
+        font-size: 14px;
+    }
 
     .hero .hero-btn .btn {
-        padding: 12px 30px;
+        padding: 10px 20px;
         font-size: 14px;
     }
 }
+
 
 
 
@@ -1071,7 +1050,6 @@ a:focus {
 
 
 
-
 /*******************************/
 /********** Class CSS **********/
 /*******************************/
@@ -1101,7 +1079,8 @@ a:focus {
     border-radius: 30px; /* Rounded corners for a modern feel */
     background: none;
     border: 2px solid #0d2c19;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    backface-visibility: hidden; /* Optimize GPU performance */
 }
 
 .class #class-filter li:hover,
@@ -1112,11 +1091,18 @@ a:focus {
 
 .class .class-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 15px; /* Round corners for a sleek look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Round corners for a sleek look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optimized shadow */
+    transform: translate3d(0, 0, 0); /* Ensure GPU acceleration */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backface-visibility: hidden; /* Avoid performance issues with 3D transforms */
+}
+
+.class .class-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
 }
 
 .class .class-wrap {
@@ -1131,18 +1117,24 @@ a:focus {
 .class .class-img img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px; /* Smooth rounded corners */
+    backface-visibility: hidden; /* Performance optimization */
+    will-change: transform; /* Performance hint for potential transform changes */
 }
 
 .class .class-text {
     position: relative;
-    padding: 30px 30px 25px 30px;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 50px;
+    background: linear-gradient(rgba(9, 57, 28, 0.872), rgba(19, 123, 31, 0.7));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+    height: auto; /* Allow natural height adjustment based on content */
+    max-height: 80px; /* Maximum height to ensure it's not too tall */
+   
 }
+
 
 .class .class-text h2 {
     font-size: 20px;
@@ -1154,13 +1146,13 @@ a:focus {
 .class .class-teacher {
     position: relative;
     height: 50px;
-    margin-top: -60px;
-    margin-bottom: 20px;
+    margin-top: -50px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 30px; /* Rounded teacher container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optimized shadow */
+    border-radius: 20px; /* Rounded teacher container */
 }
 
 .class .class-teacher img {
@@ -1168,7 +1160,7 @@ a:focus {
     height: 50px;
     border-radius: 50%;
     background: #F7CAC9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .class .class-teacher h3 {
@@ -1191,7 +1183,8 @@ a:focus {
     color: #0d3526;
     background: #cef7c9;
     border-radius: 50%;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    will-change: background, color;
 }
 
 .class .class-wrap:hover .class-teacher a {
@@ -1201,8 +1194,8 @@ a:focus {
 
 .class .class-text button {
     position: absolute;
-    left: 275px;  /* Position the button 15px from the right */
-    bottom: 7px; /* Position the button 15px from the bottom */
+    left: 275px;  /* Position the button */
+    bottom: 7px; /* Position the button */
     padding: 8px 15px;  /* Slightly larger button */
     font-size: 14px;  /* Larger font size */
     background-color: #299551;
@@ -1210,17 +1203,13 @@ a:focus {
     border: none;
     border-radius: 30px; /* Rounded button */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    will-change: background-color, transform;
 }
 
 .class .class-text button:hover {
     background-color: #0d3526;  /* Darker shade on hover */
     transform: scale(1.1);  /* Slightly grow the button */
-}
-
-.class .class-item:hover {
-    transform: translateY(-5px);  /* Subtle lift effect */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
 }
 
 @media (max-width: 768px) {
@@ -1238,7 +1227,6 @@ a:focus {
         padding: 6px 12px;
     }
 }
-
 
 
 
