@@ -703,6 +703,33 @@ a:focus {
 .about .about-text a.btn:hover {
     background: #f7cac9;
     color: #154412;
+
+    
+    
+}
+.teaching-experiences, .work-history {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.teaching-experiences h3, .work-history h3 {
+    color: #1c5e18;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.teaching-experiences ul, .work-history ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.teaching-experiences ul li, .work-history ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
 }
 
 /*******************************/
