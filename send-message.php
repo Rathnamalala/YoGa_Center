@@ -2,43 +2,54 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load Composer's autoloader
 require 'vendor/autoload.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate inputs
-    $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL);
-    $subject = strip_tags(trim($_POST["subject"]));
-    $message = trim($_POST["message"]);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $subject = htmlspecialchars(trim($_POST['subject']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
-    if (!$name || !$email || !$subject || !$message) {
-        header("Location: contact.php?error=Please fill all fields correctly.");
-        exit();
+    // Basic validation
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        header("Location: contact.php?error=All fields are required!");
+        exit;
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: contact.php?error=Invalid email format!");
+        exit;
     }
 
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings
+        // SMTP Configuration
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'kanchanasaranga11@gmail.com'; // Your Gmail email
-        $mail->Password   = 'yoozbtjcobmrmjvp'; // Replace with your Gmail App password or token
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
+        $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
+        $mail->SMTPAuth = true;
+        $mail->Username = 'kanchanasaranga11@gmail.com'; // Your Gmail address
+        $mail->Password = 'yoozbtjcobmrmjvp'; // Your App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-        // Recipient settings
+        // Email settings
         $mail->setFrom($email, $name);
-        $mail->addAddress('kanchanasaranga11@gmail.com');
+        $mail->addAddress('kanchanasaranga11@gmail.com'); // Your recipient email
         $mail->Subject = $subject;
-        $mail->Body    = $message;
+        $mail->Body = "
+            You have received a new message from the contact form.\n\n
+            Name: $name\n
+            Email: $email\n
+            Subject: $subject\n
+            Message:\n$message
+        ";
+        $mail->AltBody = "Name: $name\nEmail: $email\nSubject: $subject\nMessage:\n$message";
 
         $mail->send();
-        header("Location: contact.php?success=Your message was sent successfully.");
+        header("Location: contact.php?success=Message sent successfully!");
     } catch (Exception $e) {
-        header("Location: contact.php?error=Unable to send your message. Error: " . $mail->ErrorInfo);
+        header("Location: contact.php?error=Message could not be sent. Mailer Error: " . $mail->ErrorInfo);
     }
 }
 ?>
