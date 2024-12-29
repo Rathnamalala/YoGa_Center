@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
+        
+
         <meta charset="utf-8">
-        <title>Yapahuwa Yoga Villa</title>
-       <!-- Viewport for responsiveness -->
+        <title>Yapahuwa Yoga Villa </title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-<!-- Keywords for SEO optimization (use relevant, popular keywords) -->
-<meta name="keywords" content="Yapahuwa Yoga Villa, yoga retreat Sri Lanka, yoga for tourists, wellness retreat Sri Lanka, yoga in Sri Lanka, meditation retreat, Ayurvedic yoga, spiritual retreats, yoga vacation Sri Lanka, Sri Lanka yoga center, yoga for relaxation, Sri Lanka wellness">
-
-<!-- Description for SEO (appears in search results, summarize the page content with relevant keywords) -->
-<meta name="description" content="Yapahuwa Yoga Villa offers peaceful yoga retreats in Sri Lanka, perfect for tourists seeking relaxation, wellness, and spiritual growth. Join us for yoga, meditation, and Ayurveda in a serene and scenic environment.">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/YapahuwaYogaVilla.png" rel="icon">
+        <link href="img/profile.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -28,6 +25,26 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .message {
+                margin: 15px 0;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                display: none;
+            }
+            .message.success {
+                color: #155724;
+                background-color: #d4edda;
+                border: 1px solid #c3e6cb;
+            }
+            .message.error {
+                color: #721c24;
+                background-color: #f8d7da;
+                border: 1px solid #f5c6cb;
+            }
+        </style>
     </head>
 
     <body>
@@ -38,13 +55,13 @@
                     <div class="col-md-8">
                         <div class="top-bar-left">
                             <div class="text">
-                                
-                                <h2></h2>
-                                <p></p>
+                                <i class="far fa-clock"></i>
+                                <h2>8:00 - 9:00</h2>
+                                <p>Mon - Fri</p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>+94777748206</h2>
+                                <h2>+075 05714456</h2>
                                 <p>For Appointment</p>
                             </div>
                         </div>
@@ -52,10 +69,10 @@
                     <div class="col-md-4">
                         <div class="top-bar-right">
                             <div class="social">
-                                
-                                <a href="https://www.facebook.com/share/1DGGQiJmzx/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://youtube.com/@indikayoga1100?si=30Gb7tBPBZJkYiRD"><i class="fab fa-youtube"></i></a>
-                                <a href="https://www.instagram.com/srilankanyoga_guru?utm_source=qr&igsh=MWxpZjg5cHhnamFmdA== "><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -67,9 +84,8 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                    <div class="logo-animation"></div> <!-- Animated background -->
-                    <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="logo" />                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <a href="index.html" class="navbar-brand">Y<span>oo</span>ga</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -77,7 +93,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link ">About</a>
-                        <a href="price.html" class="nav-item nav-link">Plans</a>
+                        <a href="price.html" class="nav-item nav-link">Price</a>
                         <a href="classes.html" class="nav-item nav-link">Classes</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="reviews.html" class="nav-item nav-link">Reviews</a>
@@ -104,7 +120,10 @@
                     <div class="col-12">
                         <h2>Contact</h2>
                     </div>
-                   
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,81 +168,110 @@
                     </div>
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="contact-form">
+                            <div id="message" class="message"></div>
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" action="send-message.php" method="POST" novalidate="novalidate">
-                                <div class="control-group mb-3">
-                                  <input type="text" class="form-control" name="name" placeholder="Your Name" required="required" />
+                            <form name="sentMessage" method="post" action="send-email.php">
+                                <h2>Contact Us</h2>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                                 </div>
-                                <div class="control-group mb-3">
-                                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="required" />
+                    
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                                 </div>
-                                <div class="control-group mb-3">
-                                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="required" />
+                    
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                                 </div>
-                                <div class="control-group mb-3">
-                                  <textarea class="form-control" name="message" placeholder="Message" required="required"></textarea>
+                    
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
                                 </div>
-                                <div class="text-center">
-                                  <button class="btn btn-primary" type="submit">Send Message</button>
+                    
+                                <div class="form-group">
+                                    <button type="submit" class="btn-submit">Send Message</button>
                                 </div>
-                              </form>
+                            </form>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
 
-        <?php if (isset($_GET['error'])) { ?>
-            <div class="alert alert-danger text-center"><?php echo htmlspecialchars($_GET['error']); ?></div>
-          <?php } ?>
-          
-          <?php if (isset($_GET['success'])) { ?>
-            <div class="alert alert-success text-center"><?php echo htmlspecialchars($_GET['success']); ?></div>
-          <?php } ?>
+      
+             
           
         <!-- Contact End -->
 
 
-      
-<!-- Footer Start -->
+      <!-- Footer Start -->
 <footer class="footer">
     <div class="container">
         <div class="row">
             <!-- About Section -->
             <div class="col-lg-4 col-md-6">
-                
+                <h3 class="footer-logo">Y<span>oo</span>ga</h3>
                 <p>Discover the path to wellness with us. Your yoga journey begins here.</p>
-                <p><i class="fas fa-map-marker-alt"></i><br> 204/3,<br> Dunupathagama,<br> Maho, <br>Kurunegala,<br>srilanka.</p>
-                <p><i class="fas fa-phone-alt"></i> +94777748206</p>
-                <p><i class="fas fa-envelope"></i> indikayoga@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123, Maho, Kurunegala</p>
+                <p><i class="fas fa-phone-alt"></i> 075 5714456</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
             </div>
             <!-- Quick Links -->
             <div class="col-lg-2 col-md-6">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="price.html">Plans</a></li>
-                    <li><a href="classes.html">Classes</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <!-- Social Media -->
             <div class="col-lg-3 col-md-6">
                 <h4>Follow Us</h4>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/share/1DGGQiJmzx/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/srilankanyoga_guru?utm_source=qr&igsh=MWxpZjg5cHhnamFmdA== "><i class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/@indikayoga1100?si=30Gb7tBPBZJkYiRD"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6">
-                <div class="footer-logo-container">
-                    <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="footer-logo-image">
-                    
-                </div>
+            <!-- Newsletter -->
+            <div class="col-lg-3 col-md-6">
+                <h4>Subscribe</h4>
+                <p>Get updates on new classes and events.</p>
+                <form class="newsletter" id="subscribeForm">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="subscribeMessage" style="margin-top: 10px;"></div>
             </div>
+            
+            <script>
+                document.getElementById('subscribeForm').addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+            
+                    try {
+                        const response = await fetch('subscribe.php', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email })
+                        });
+            
+                        const result = await response.json();
+                        const messageDiv = document.getElementById('subscribeMessage');
+                        messageDiv.innerHTML = `<p style="color: ${result.status === 'success' ? 'green' : 'red'};">${result.message}</p>`;
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                });
+            </script>
             
         </div>
         <hr>
@@ -233,7 +281,7 @@
                 <p>&copy; 2025 Yooga. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <p class="com">Designed by <a class="company" href="#" target="_blank">ZigmaVision</a></p>
+                <p>Designed by <a href="https://htmlcodex.com" target="_blank">CSK Infotech</a></p>
             </div>
         </div>
     </div>
@@ -257,7 +305,29 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-    </body>
-</html>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const status = urlParams.get("status");
+                const messageDiv = document.getElementById("message");
+        
+                if (status === "success") {
+                    messageDiv.textContent = "Your message has been sent successfully.";
+                    messageDiv.className = "message success";
+                    messageDiv.style.display = "block";
+                } else if (status === "error") {
+                    messageDiv.textContent = "There was an error sending your message. Please try again.";
+                    messageDiv.className = "message error";
+                    messageDiv.style.display = "block";
+                }
+            });
+        </script>
+        
 
+
+    </body>
+    
+</html>
 
