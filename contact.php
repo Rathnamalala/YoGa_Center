@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-
+<head>
         <meta charset="utf-8">
-        <title>Yapahuwa Yoga Villa </title>
+        <title>Yapahuwa Yoga Villa</title>
+       <!-- Viewport for responsiveness -->
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+
+<!-- Keywords for SEO optimization (use relevant, popular keywords) -->
+<meta name="keywords" content="Yapahuwa Yoga Villa, yoga retreat Sri Lanka, yoga for tourists, wellness retreat Sri Lanka, yoga in Sri Lanka, meditation retreat, Ayurvedic yoga, spiritual retreats, yoga vacation Sri Lanka, Sri Lanka yoga center, yoga for relaxation, Sri Lanka wellness">
+
+<!-- Description for SEO (appears in search results, summarize the page content with relevant keywords) -->
+<meta name="description" content="Yapahuwa Yoga Villa offers peaceful yoga retreats in Sri Lanka, perfect for tourists seeking relaxation, wellness, and spiritual growth. Join us for yoga, meditation, and Ayurveda in a serene and scenic environment.">
 
         <!-- Favicon -->
-        <link href="img/profile.png" rel="icon">
+        <link href="img/YapahuwaYogaVilla.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -35,13 +38,13 @@
                     <div class="col-md-8">
                         <div class="top-bar-left">
                             <div class="text">
-                                <i class="far fa-clock"></i>
-                                <h2>8:00 - 9:00</h2>
-                                <p>Mon - Fri</p>
+                                
+                                <h2></h2>
+                                <p></p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>+075 05714456</h2>
+                                <h2>+94777748206</h2>
                                 <p>For Appointment</p>
                             </div>
                         </div>
@@ -49,10 +52,10 @@
                     <div class="col-md-4">
                         <div class="top-bar-right">
                             <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                
+                                <a href="https://www.facebook.com/share/1DGGQiJmzx/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://youtube.com/@indikayoga1100?si=30Gb7tBPBZJkYiRD"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/srilankanyoga_guru?utm_source=qr&igsh=MWxpZjg5cHhnamFmdA== "><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -64,8 +67,9 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Y<span>oo</span>ga</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <a href="index.html" class="navbar-brand">
+                    <div class="logo-animation"></div> <!-- Animated background -->
+                    <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="logo" />                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -73,7 +77,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link ">About</a>
-                        <a href="price.html" class="nav-item nav-link">Price</a>
+                        <a href="price.html" class="nav-item nav-link">Plans</a>
                         <a href="classes.html" class="nav-item nav-link">Classes</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="reviews.html" class="nav-item nav-link">Reviews</a>
@@ -100,10 +104,7 @@
                     <div class="col-12">
                         <h2>Contact</h2>
                     </div>
-                    <div class="col-12">
-                        <a href="">Home</a>
-                        <a href="">Contact</a>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -183,47 +184,47 @@
         <!-- Contact End -->
 
 
-      <!-- Footer Start -->
+      
+<!-- Footer Start -->
 <footer class="footer">
     <div class="container">
         <div class="row">
             <!-- About Section -->
             <div class="col-lg-4 col-md-6">
-                <h3 class="footer-logo">Y<span>oo</span>ga</h3>
+                
                 <p>Discover the path to wellness with us. Your yoga journey begins here.</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123, Maho, Kurunegala</p>
-                <p><i class="fas fa-phone-alt"></i> 075 5714456</p>
-                <p><i class="fas fa-envelope"></i> info@example.com</p>
+                <p><i class="fas fa-map-marker-alt"></i><br> 204/3,<br> Dunupathagama,<br> Maho, <br>Kurunegala,<br>srilanka.</p>
+                <p><i class="fas fa-phone-alt"></i> +94777748206</p>
+                <p><i class="fas fa-envelope"></i> indikayoga@gmail.com</p>
             </div>
             <!-- Quick Links -->
             <div class="col-lg-2 col-md-6">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#classes">Classes</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="price.html">Plans</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
             <!-- Social Media -->
             <div class="col-lg-3 col-md-6">
                 <h4>Follow Us</h4>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1DGGQiJmzx/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/srilankanyoga_guru?utm_source=qr&igsh=MWxpZjg5cHhnamFmdA== "><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@indikayoga1100?si=30Gb7tBPBZJkYiRD"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <!-- Newsletter -->
-            <div class="col-lg-3 col-md-6">
-                <h4>Subscribe</h4>
-                <p>Get updates on new classes and events.</p>
-                <form class="newsletter">
-                    <input type="email" placeholder="Your Email" required>
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-logo-container">
+                    <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="footer-logo-image">
+                    
+                </div>
             </div>
+            
         </div>
         <hr>
         <!-- Copyright Section -->
@@ -232,7 +233,7 @@
                 <p>&copy; 2025 Yooga. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <p>Designed by <a href="https://htmlcodex.com" target="_blank">CSK Infotech</a></p>
+                <p class="com">Designed by <a class="company" href="#" target="_blank">ZigmaVision</a></p>
             </div>
         </div>
     </div>
