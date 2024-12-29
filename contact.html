@@ -25,6 +25,26 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .message {
+                margin: 15px 0;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                display: none;
+            }
+            .message.success {
+                color: #155724;
+                background-color: #d4edda;
+                border: 1px solid #c3e6cb;
+            }
+            .message.error {
+                color: #721c24;
+                background-color: #f8d7da;
+                border: 1px solid #f5c6cb;
+            }
+        </style>
     </head>
 
     <body>
@@ -148,37 +168,43 @@
                     </div>
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="contact-form">
+                            <div id="message" class="message"></div>
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" action="send-message.php" method="POST" novalidate="novalidate">
-                                <div class="control-group mb-3">
-                                  <input type="text" class="form-control" name="name" placeholder="Your Name" required="required" />
+                            <form name="sentMessage" method="post" action="send-email.php">
+                                <h2>Contact Us</h2>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                                 </div>
-                                <div class="control-group mb-3">
-                                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="required" />
+                    
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                                 </div>
-                                <div class="control-group mb-3">
-                                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="required" />
+                    
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                                 </div>
-                                <div class="control-group mb-3">
-                                  <textarea class="form-control" name="message" placeholder="Message" required="required"></textarea>
+                    
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
                                 </div>
-                                <div class="text-center">
-                                  <button class="btn btn-primary" type="submit">Send Message</button>
+                    
+                                <div class="form-group">
+                                    <button type="submit" class="btn-submit">Send Message</button>
                                 </div>
-                              </form>
+                            </form>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
 
-        <?php if (isset($_GET['error'])) { ?>
-            <div class="alert alert-danger text-center"><?php echo htmlspecialchars($_GET['error']); ?></div>
-          <?php } ?>
-          
-          <?php if (isset($_GET['success'])) { ?>
-            <div class="alert alert-success text-center"><?php echo htmlspecialchars($_GET['success']); ?></div>
-          <?php } ?>
+      
+             
           
         <!-- Contact End -->
 
@@ -219,11 +245,34 @@
             <div class="col-lg-3 col-md-6">
                 <h4>Subscribe</h4>
                 <p>Get updates on new classes and events.</p>
-                <form class="newsletter">
-                    <input type="email" placeholder="Your Email" required>
+                <form class="newsletter" id="subscribeForm">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                     <button type="submit"><i class="fas fa-paper-plane"></i></button>
                 </form>
+                <div id="subscribeMessage" style="margin-top: 10px;"></div>
             </div>
+            
+            <script>
+                document.getElementById('subscribeForm').addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+            
+                    try {
+                        const response = await fetch('subscribe.php', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email })
+                        });
+            
+                        const result = await response.json();
+                        const messageDiv = document.getElementById('subscribeMessage');
+                        messageDiv.innerHTML = `<p style="color: ${result.status === 'success' ? 'green' : 'red'};">${result.message}</p>`;
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                });
+            </script>
+            
         </div>
         <hr>
         <!-- Copyright Section -->
@@ -256,7 +305,29 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-    </body>
-</html>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const status = urlParams.get("status");
+                const messageDiv = document.getElementById("message");
+        
+                if (status === "success") {
+                    messageDiv.textContent = "Your message has been sent successfully.";
+                    messageDiv.className = "message success";
+                    messageDiv.style.display = "block";
+                } else if (status === "error") {
+                    messageDiv.textContent = "There was an error sending your message. Please try again.";
+                    messageDiv.className = "message error";
+                    messageDiv.style.display = "block";
+                }
+            });
+        </script>
+        
 
+
+    </body>
+    
+</html>
 
