@@ -127,10 +127,13 @@
         <div class="section-header text-center mb-4 mt-5">
             <h2>Submit Your Review</h2>
         </div>
-
+        
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8">
-                <form action="#" method="post" class="p-4 border shadow-sm">
+                <!-- Placeholder for Success/Error Message -->
+                <div id="reviewMessage" style="display: none;"></div>
+        
+                <form id="reviewForm" method="post" action="submit-review.php" class="p-4 border shadow-sm">
                     <div class="form-group mb-3">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
@@ -149,7 +152,7 @@
                 </form>
             </div>
         </div>
-    </div>
+        
     <!-- Reviews Section End -->
 
     <!-- Footer Start -->
@@ -184,11 +187,34 @@
                 <div class="col-lg-3 col-md-6">
                     <h4>Subscribe</h4>
                     <p>Get updates on new classes and events.</p>
-                    <form class="newsletter">
-                        <input type="email" placeholder="Your Email" required>
+                    <form class="newsletter" id="subscribeForm">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
+                    <div id="subscribeMessage" style="margin-top: 10px;"></div>
                 </div>
+                
+                <script>
+                    document.getElementById('subscribeForm').addEventListener('submit', async function (e) {
+                        e.preventDefault();
+                        const email = document.getElementById('email').value;
+                
+                        try {
+                            const response = await fetch('subscribe.php', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ email })
+                            });
+                
+                            const result = await response.json();
+                            const messageDiv = document.getElementById('subscribeMessage');
+                            messageDiv.innerHTML = `<p style="color: ${result.status === 'success' ? 'green' : 'red'};">${result.message}</p>`;
+                        } catch (error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                </script>
+                
             </div>
             <hr>
             <div class="row">
@@ -214,5 +240,47 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    document.getElementById("reviewForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        const formData = new FormData(this);
+    
+        fetch("submit-review.php", {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                const reviewMessage = document.getElementById("reviewMessage");
+                reviewMessage.style.display = "block";
+                reviewMessage.style.padding = "10px";
+                reviewMessage.style.borderRadius = "5px";
+                reviewMessage.style.textAlign = "center";
+    
+                if (data.status === "success") {
+                    reviewMessage.style.background = "#e0ffe4";
+                    reviewMessage.style.color = "#228b22";
+                    reviewMessage.style.border = "2px solid #33cc33";
+                    reviewMessage.textContent = data.message;
+    
+                    // Clear form fields
+                    document.getElementById("reviewForm").reset();
+                } else {
+                    reviewMessage.style.background = "#ffe4e0";
+                    reviewMessage.style.color = "#8b2222";
+                    reviewMessage.style.border = "2px solid #cc3333";
+                    reviewMessage.textContent = data.message;
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+    });
+</script>
+
+
+
 </body>
 </html>
