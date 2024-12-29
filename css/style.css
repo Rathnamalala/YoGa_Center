@@ -714,7 +714,6 @@ a:focus {
     margin-right: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 /* Qualifications List Enhancement */
 .about-list {
     margin-top: 30px;
@@ -769,6 +768,7 @@ a:focus {
     font-size: 18px;
     margin-bottom: 5px;
 }
+
 .qualification-picture {
     display: grid;
     grid-template-areas:
@@ -825,7 +825,10 @@ a:focus {
 }
 
 /* Responsive Adjustments */
+
+/* Mobile Devices and Tablets */
 @media (max-width: 768px) {
+    /* Adjust Grid Layout to Stack Items */
     .qualification-picture {
         grid-template-areas:
             "main"
@@ -834,16 +837,94 @@ a:focus {
             "extra1"
             "extra2";
     }
+
+    /* Adjust Collage Item Height for Smaller Screens */
     .qualification-picture .collage-item {
         height: 150px;
     }
+
+    /* Adjust Grid Layout for Smaller Screens */
+    .qualification .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .qualification .details strong {
+        font-size: 16px;
+    }
+
+    .qualification .details p {
+        font-size: 14px;
+    }
 }
+
+/* Larger Tablets and Small Desktop */
+@media (max-width: 1024px) {
+    /* Adjust Grid Layout for Tablets */
+    .qualification-picture {
+        grid-template-areas:
+            "main main"
+            "left right"
+            "extra1 extra2";
+    }
+
+    .qualification-picture .collage-item {
+        height: 200px;
+    }
+
+    /* Adjust Font Size for Medium-Sized Screens */
+    .qualification .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .qualification .details strong {
+        font-size: 17px;
+    }
+
+    .qualification .details p {
+        font-size: 15px;
+    }
+}
+
+/* Desktop Devices */
+@media (min-width: 1025px) {
+    /* Keep the default grid layout */
+    .qualification-picture {
+        grid-template-areas:
+            "main main"
+            "left right"
+            "extra1 extra2";
+    }
+
+    .qualification-picture .collage-item {
+        height: 200px;
+    }
+
+    /* Adjust Icon and Font Size for Desktop */
+    .qualification .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .qualification .details strong {
+        font-size: 18px;
+    }
+
+    .qualification .details p {
+        font-size: 16px;
+    }
+}
+
 /* Importing Google Fonts for Modern Typography */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* Common Styles for Both Sections */
-.teaching-experiences,
-.services {
+.teaching-experiences
+ {
     background: linear-gradient(145deg, #ffffff, #f9f9f9);
     border-radius: 20px;
     padding: 40px;
@@ -855,8 +936,8 @@ a:focus {
 }
 
 /* Title and Subheading Styling */
-.teaching-experiences h3,
-.services h3 {
+.teaching-experiences h3
+ {
     color: #2c6b47;
     font-size: 30px;
     font-weight: 700;
@@ -866,21 +947,21 @@ a:focus {
     padding-bottom: 15px;
 }
 
-.teaching-experiences h3::after,
-.services h3::after {
+.teaching-experiences h3::after
+ {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 70px;
     height: 4px;
-    background: #39b54a;
+    background: #ffffff;
 }
 
-.teaching-experiences p,
-.services p {
+.teaching-experiences p
+ {
     color: #555;
-    font-size: 16px;
+    font-size: 26px;
     line-height: 1.8;
     margin-bottom: 15px;
     text-align: justify;
@@ -950,54 +1031,180 @@ a:focus {
         padding: 15px;
     }
 }
-
-/* Reasons Section Styling */
-.reasons-list {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+/* General Styling for the Section */
+.services {
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+    color: #2c6b47;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 15px;
+    text-align: center; /* Center the title */
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 70px;
+    height: 4px;
+    background: #ffffff;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 150%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+/* Slider Content */
+.slider-content {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    animation: slide 15s infinite; /* Auto-slide effect */
+    gap: 20px;
+    width: 80%;
+}
+
+/* Keyframe for Auto-Slide */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Reason Box Styling */
 .reason {
-    background: #f1f1f1;
-    border-radius: 8px;
+    min-width: 100%;
     padding: 25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centering the content */
+    background: linear-gradient(145deg, #39b54a, #3b9f57); /* Gradient Background */
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .reason:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Elevate card on hover */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.material-icons {
+    font-size: 50px;
+    color: #0e6022;
+    margin-bottom: 15px;
 }
 
 .reason strong {
-    font-size: 18px;
-    color: #333;
-    display: block;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
     margin-bottom: 10px;
-    font-weight: 600;
+    display: block;
 }
 
 .reason p {
-    font-size: 14px;
-    color: #777;
+    font-size: 1rem;
+    color: #fff;
     line-height: 1.6;
     margin: 0;
 }
-.material-icons {
-    font-size: 40px;
-    color: #39b54a;
-    margin-right: 20px;
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .services {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .reason {
+        padding: 18px;
+    }
+
+    .reason strong {
+        font-size: 1.1rem;
+    }
+
+    .reason p {
+        font-size: 0.9rem;
+    }
 }
 
-/* Hover Effects for Interactive Elements */
-.yoga-service:hover .service-info strong,
-.reason:hover strong {
-    color: #39b54a;
-    text-decoration: underline;
+/* Tablet Devices */
+@media (max-width: 1024px) {
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .reason {
+        padding: 20px;
+    }
+
+    .reason strong {
+        font-size: 1.2rem;
+    }
+
+    .reason p {
+        font-size: 1rem;
+    }
 }
+
+/* Larger Screens (Desktop) */
+@media (min-width: 1025px) {
+    .slider-container {
+        max-width: 800px; /* Controls max-width for larger screens */
+    }
+
+    .reason {
+        padding: 25px;
+    }
+
+    .reason strong {
+        font-size: 1.4rem;
+    }
+
+    .reason p {
+        font-size: 1rem;
+    }
+}
+
+
 
 
 /* CTA Section Enhancement */
