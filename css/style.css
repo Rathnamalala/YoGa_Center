@@ -2743,6 +2743,7 @@ a:focus {
     color: #e5e5e5;
     padding: 60px 20px;
     font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 
 .footer h3, .footer h4 {
@@ -2954,6 +2955,108 @@ hr {
     .gallery-footer .btn {
         font-size: 14px;
         padding: 10px 18px;
+    }
+}
+
+
+
+/* General Styling for Class Container */
+.class-wrap {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-wrap:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Class Image */
+.class-img img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Class Text Section */
+.class-text {
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Teacher Info */
+.class-teacher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.class-teacher img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.class-teacher h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.class-teacher a {
+    color: #fff;
+    background: #ff5722;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.class-teacher a:hover {
+    background: #e64a19;
+}
+
+/* Description Button */
+.class-text button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #3f51b5;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.class-text button:hover {
+    background: #303f9f;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .class-text h3 {
+        font-size: 16px;
+    }
+
+    .class-text button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .class-teacher h3 {
+        font-size: 16px;
     }
 }
 
