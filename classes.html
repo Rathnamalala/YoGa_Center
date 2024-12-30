@@ -15,8 +15,15 @@
         <!-- Favicon -->
         <link href="img/YapahuwaYogaVilla.png" rel="icon">
 
+       
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
+        
+
 
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -25,12 +32,24 @@
         <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+
+       
     </head>
 
     <body>
+
+        <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/+94777748206?text=Hi, I am interested in learning more about your yoga center!" 
+class="whatsapp-float" 
+target="_blank" 
+aria-label="Chat with us on WhatsApp">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
             <div class="container-fluid">
@@ -67,15 +86,18 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">
-                    <div class="logo-animation"></div> <!-- Animated background -->
-                    <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="logo" />                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <a href="index.html" class="navbar-brand"> <div class="logo-animation"></div> <!-- Animated background -->
+                        <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="logo" /></a>
+                    
+                    
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
                         <a href="about.html" class="nav-item nav-link ">About</a>
                         <a href="price.html" class="nav-item nav-link">Plans</a>
                         <a href="classes.html" class="nav-item nav-link active">Classes</a>
@@ -97,26 +119,6 @@
         <!-- Nav Bar End -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
         <!-- Page Header Start -->
         <div class="page-header">
             <div class="container">
@@ -132,153 +134,149 @@
 
 
        <!-- Class Start -->
-       <div class="class">
-        <div class="container">
-            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                <p>Our Classes</p>
-                <h2>Yoga Classes</h2>
+<div class="class">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Our Classes</p>
+            <h2>Yoga Classes</h2>
+        </div>
+
+        <div class="row class-container">
+            <!-- Class Item: Hatha Yoga -->
+            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="class-wrap">
+                    <div class="class-img">
+                        <img src="img/yoga1.jpg" alt="Hatha Yoga">
+                    </div>
+                    <div class="class-text" style="font-size: 14px;">
+                        <div class="class-teacher">
+                            <img src="img/profile.png" alt="Hatha Yoga Teacher">
+                            <h3>Hatha Yoga</h3>
+                            <a href="contact.html" aria-label="Contact for Hatha Yoga">+</a>
+                        </div>
+                        <div class="class-details">
+                            <button class="btn-more" aria-label="Learn more about Hatha Yoga">More</button>
+                            <p class="hidden-text" style="display: none;">
+                                Hatha Yoga focuses on physical and mental strength-building postures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--  
-            <div class="row">
-                <div class="col-12">
-                    <ul id="class-filter">
-                        <li data-filter="*" class="filter-active">All Classes</li>
-                        <li data-filter=".filter-1">Pilates Yoga</li>
-                        <li data-filter=".filter-2">Hatha Yoga</li>
-                        <li data-filter=".filter-3">Vinyasa yoga</li>
-                    </ul>
+
+            <!-- Class Item: Pilates Yoga -->
+            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="class-wrap">
+                    <div class="class-img">
+                        <img src="img/yoga2.jpg" alt="Pilates Yoga">
+                    </div>
+                    <div class="class-text" style="font-size: 14px;">
+                        <div class="class-teacher">
+                            <img src="img/profile.png" alt="Pilates Yoga Teacher">
+                            <h3>Pilates Yoga</h3>
+                            <a href="contact.html" aria-label="Contact for Pilates Yoga">+</a>
+                        </div>
+                        <div class="class-details">
+                            <button class="btn-more" aria-label="Learn more about Pilates Yoga">More</button>
+                            <p class="hidden-text" style="display: none;">
+                                Pilates Yoga improves flexibility, balance, and core strength.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            -->
+            <!-- Class Item: Vinyasa Yoga -->
+            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="class-wrap">
+                    <div class="class-img">
+                        <img src="img/yoga3.jpg" alt="Vinyasa Yoga">
+                    </div>
+                    <div class="class-text" style="font-size: 14px;">
+                        <div class="class-teacher">
+                            <img src="img/profile.png" alt="Vinyasa Yoga Teacher">
+                            <h3>Vinyasa Yoga</h3>
+                            <a href="contact.html" aria-label="Contact for Vinyasa Yoga">+</a>
+                        </div>
+                        <div class="class-details">
+                            <button class="btn-more" aria-label="Learn more about Vinyasa Yoga">More</button>
+                            <p class="hidden-text" style="display: none;">
+                                Vinyasa Yoga emphasizes a flow of poses synchronized with breath.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Class Item: Yin Yoga -->
+            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="class-wrap">
+                    <div class="class-img">
+                        <img src="img/yoga4.jpg" alt="Yin Yoga">
+                    </div>
+                    <div class="class-text" style="font-size: 14px;">
+                        <div class="class-teacher">
+                            <img src="img/profile.png" alt="Yin Yoga Teacher">
+                            <h3>Yin Yoga</h3>
+                            <a href="contact.html" aria-label="Contact for Yin Yoga">+</a>
+                        </div>
+                        <div class="class-details">
+                            <button class="btn-more" aria-label="Learn more about Yin Yoga">More</button>
+                            <p class="hidden-text" style="display: none;">
+                                Yin Yoga targets deep connective tissues and promotes relaxation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="row class-container">
-                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                    <div class="class-wrap">
-                        <div class="class-img">
-                            <img src="img/yoga1.jpg" alt="Image">
+            <!-- Class Item: Ashtanga Yoga -->
+            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-5 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="class-wrap">
+                    <div class="class-img">
+                        <img src="img/yoga5.jpg" alt="Ashtanga Yoga">
+                    </div>
+                    <div class="class-text" style="font-size: 14px;">
+                        <div class="class-teacher">
+                            <img src="img/profile.png" alt="Ashtanga Yoga Teacher">
+                            <h3>Ashtanga Yoga</h3>
+                            <a href="contact.html" aria-label="Contact for Ashtanga Yoga">+</a>
                         </div>
-                        <div class="class-text">
-                            <div class="class-teacher">
-                                <img src="img/profile.png" alt="Image">
-                                <h3>Hatha Yoga</h3>
-                                <a href="contact.html">+</a>
-                            </div>
-                            <div>
-                                <button>
-                                     more
-                                </button>
-                            </div>
-                            
-                            
+                        <div class="class-details">
+                            <button class="btn-more" aria-label="Learn more about Ashtanga Yoga">More</button>
+                            <p class="hidden-text" style="display: none;">
+                                Ashtanga Yoga follows a set sequence of poses for strength and stamina.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="class-wrap">
-                        <div class="class-img">
-                            <img src="img/yoga2.jpg" alt="Image">
-                        </div>
-                        <div class="class-text">
-                            <div class="class-teacher">
-                                <img src="img/profile.png" alt="Image">
-                                <h3>Kate Glover</h3>
-                                <a href="contact.html">+</a>
-                            </div>
-                            <div>
-                                <button>
-                                     more
-                                </button>
-                            </div>
-                           
-                        </div>
+            </div>
+
+            <!-- Class Item: Power Yoga -->
+            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="class-wrap">
+                    <div class="class-img">
+                        <img src="img/yoga6.jpg" alt="Power Yoga">
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="class-wrap">
-                        <div class="class-img">
-                            <img src="img/yoga3.jpg" alt="Image">
+                    <div class="class-text" style="font-size: 14px;">
+                        <div class="class-teacher">
+                            <img src="img/profile.png" alt="Power Yoga Teacher">
+                            <h3>Power Yoga</h3>
+                            <a href="contact.html" aria-label="Contact for Power Yoga">+</a>
                         </div>
-                        <div class="class-text">
-                            <div class="class-teacher">
-                                <img src="img/profile.png" alt="Image">
-                                <h3>Elina Ekman</h3>
-                                <a href="contact.html">+</a>
-                            </div>
-                            <div>
-                                <button>
-                                     more
-                                </button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="class-wrap">
-                        <div class="class-img">
-                            <img src="img/yoga7.jpg" alt="Image">
-                        </div>
-                        <div class="class-text">
-                            <div class="class-teacher">
-                                <img src="img/profile.png" alt="Image">
-                                <h3>Lilly Fry</h3>
-                                <a href="contact.html">+</a>
-                            </div>
-                            <div>
-                                <button>
-                                     more
-                                </button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="class-wrap">
-                        <div class="class-img">
-                            <img src="img/yoga5.jpg" alt="Image">
-                        </div>
-                        <div class="class-text">
-                            <div class="class-teacher">
-                                <img src="img/profile.png" alt="Image">
-                                <h3>Olivia Yates</h3>
-                                <a href="contact.html">+</a>
-                            </div>
-                            <div>
-                                <button>
-                                     more
-                                </button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                    <div class="class-wrap">
-                        <div class="class-img">
-                            <img src="img/yoga6.jpg" alt="Image">
-                        </div>
-                        <div class="class-text">
-                            <div class="class-teacher">
-                                <img src="img/profile.png" alt="Image">
-                                <h3>Millie Harper</h3>
-                                <a href="contact.html">+</a>
-                            </div>
-                            <div>
-                                <button>
-                                     more
-                                </button>
-                            </div>
-                            
+                        <div class="class-details">
+                            <button class="btn-more" aria-label="Learn more about Power Yoga">More</button>
+                            <p class="hidden-text" style="display: none;">
+                                Power Yoga combines traditional poses with dynamic exercises.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Class End -->
+</div>
+<!-- Class End -->
         
         
         <!-- Discount Start >
@@ -353,23 +351,43 @@
     </div>
 </footer>
 <!-- Footer End -->
+<!-- Footer End -->
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<script>
+    // JavaScript for toggling "More" button
+    document.querySelectorAll('.btn-more').forEach(button => {
+        button.addEventListener('click', () => {
+            const hiddenText = button.nextElementSibling;
+            if (hiddenText.style.display === 'none' || !hiddenText.style.display) {
+                hiddenText.style.display = 'block';
+                button.textContent = 'Less';
+            } else {
+                hiddenText.style.display = 'none';
+                button.textContent = 'More';
+            }
+        });
+    });
+</script>
+
+
+
     </body>
 </html>
+
