@@ -67,6 +67,34 @@ a:focus {
     padding-top: 10px;
 }
 
+/* WhatsApp Floating Button Styles */
+.whatsapp-float {
+    position: fixed;
+    bottom: 10px;
+    right: 70px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    display: block;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
 
 /**********************************/
 /********** Top Bar CSS ***********/
@@ -2732,8 +2760,8 @@ a:focus {
 .footer-logo-container {
     display: flex;
     align-items: center;
+    margin-left: -120px; /* Adjust this value to move it more or less to the left */
     /* Adjust spacing between the image and text */
-    
 }
 
 .footer-logo-image {
@@ -2742,6 +2770,7 @@ a:focus {
     object-fit: contain; /* Ensure the logo maintains its aspect ratio */
     top: 50%;
 }
+
 
 
 
@@ -2792,6 +2821,10 @@ hr {
 
     .footer .col-md-6 {
         margin-bottom: 20px;
+    }
+    .footer-logo-container {
+        margin-left: 0;
+        justify-content: center;
     }
 }
 
