@@ -2333,7 +2333,7 @@ a:focus {
     padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 150%;
     max-width: 700px;
     animation: fadeIn 1s ease;
 }
@@ -3121,7 +3121,7 @@ hr {
 
 
 .contact .container {
-    
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -3133,12 +3133,15 @@ hr {
 }
 
 .contact .col-md-6 {
-    width: 78%; /* Adjust width for two equal columns */
+    width: 108%; /* Adjust width for two equal columns */
     margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .contact img {
-    width: 150%; /* Ensures the image is responsive */
+    width: 100%; /* Ensures the image is responsive */
     height: 100%;
 }
 
