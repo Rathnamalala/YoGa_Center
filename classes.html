@@ -1,393 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Yapahuwa Yoga Villa</title>
-       <!-- Viewport for responsiveness -->
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<!-- Keywords for SEO optimization (use relevant, popular keywords) -->
-<meta name="keywords" content="Yapahuwa Yoga Villa, yoga retreat Sri Lanka, yoga for tourists, wellness retreat Sri Lanka, yoga in Sri Lanka, meditation retreat, Ayurvedic yoga, spiritual retreats, yoga vacation Sri Lanka, Sri Lanka yoga center, yoga for relaxation, Sri Lanka wellness">
+<head>
+    <meta charset="utf-8">
+    <title>Yapahuwa Yoga Villa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="Yoga classes Sri Lanka, wellness retreat, yoga for relaxation, breathwork, Hatha Yoga, Reiki Yoga, Kundalini Yoga, Kriya Yoga, Acupressure Therapy">
+    <meta name="description" content="Yapahuwa Yoga Villa offers a variety of yoga classes including Hatha, Reiki, Kundalini, Kriya, Acupressure Therapy, and Breathwork for relaxation and wellness.">
+    <link href="img/YapahuwaYogaVilla.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the page */
+        .class-img {
+            position: relative;
+        }
 
-<!-- Description for SEO (appears in search results, summarize the page content with relevant keywords) -->
-<meta name="description" content="Yapahuwa Yoga Villa offers peaceful yoga retreats in Sri Lanka, perfect for tourists seeking relaxation, wellness, and spiritual growth. Join us for yoga, meditation, and Ayurveda in a serene and scenic environment.">
+        .btn-more {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #6699FF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
 
-        <!-- Favicon -->
-        <link href="img/YapahuwaYogaVilla.png" rel="icon">
+        .btn-more:hover {
+            background-color: #5577cc;
+        }
 
-       
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        
-        
+        .hidden-text {
+            display: none;
+        }
 
+        .class-item {
+            margin-bottom: 30px;
+        }
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        .class-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
 
+        .class-text {
+            margin-top: 15px;
+        }
 
-       
-    </head>
+        .class-teacher {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    <body>
+        .class-teacher img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
-        <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/+94777748206?text=Hi, I am interested in learning more about your yoga center!" 
-class="whatsapp-float" 
-target="_blank" 
-aria-label="Chat with us on WhatsApp">
- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-</a>
+        .class-teacher h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
 
+        .class-teacher a {
+            font-size: 20px;
+            text-decoration: none;
+        }
 
-        <!-- Top Bar Start -->
-        <div class="top-bar d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="top-bar-left">
-                            <div class="text">
-                                
-                                <h2></h2>
-                                <p></p>
-                            </div>
-                            <div class="text">
-                                <i class="fa fa-phone-alt"></i>
-                                <h2>+94777748206</h2>
-                                <p>For Appointment</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                
-                                <a href="https://www.facebook.com/share/1DGGQiJmzx/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://youtube.com/@indikayoga1100?si=30Gb7tBPBZJkYiRD"><i class="fab fa-youtube"></i></a>
-                                <a href="https://www.instagram.com/srilankanyoga_guru?utm_source=qr&igsh=MWxpZjg5cHhnamFmdA== "><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Top Bar End -->
+        .class-details p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
 
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
-                    <a href="index.html" class="navbar-brand"> <div class="logo-animation"></div> <!-- Animated background -->
-                        <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="logo" /></a>
-                    
-                    
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+94777748206?text=Hi, I am interested in learning more about your yoga center!" 
+       class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    </a>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link ">Home</a>
-                        <a href="about.html" class="nav-item nav-link ">About</a>
-                        <a href="price.html" class="nav-item nav-link">Plans</a>
-                        <a href="classes.html" class="nav-item nav-link active">Classes</a>
-                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                        <a href="reviews.html" class="nav-item nav-link">Reviews</a>
-                        <!--<a href="pose.html" class="nav-item nav-link">Pose</a>-->
-                        <!--<div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
-                        </div>-->
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Nav Bar End -->
-
-
-        <!-- Page Header Start -->
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Classes</h2>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Page Header End -->
-
-
-       <!-- Class Start -->
-<div class="class">
-    <div class="container">
-        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <p>Our Classes</p>
-            <h2>Yoga Classes</h2>
-        </div>
-
-        <div class="row class-container">
-            <!-- Class Item: Hatha Yoga -->
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                <div class="class-wrap">
-                    <div class="class-img">
-                        <img src="img/yoga1.jpg" alt="Hatha Yoga">
-                    </div>
-                    <div class="class-text" style="font-size: 14px;">
-                        <div class="class-teacher">
-                            <img src="img/profile.png" alt="Hatha Yoga Teacher">
-                            <h3>Hatha Yoga</h3>
-                            <a href="contact.html" aria-label="Contact for Hatha Yoga">+</a>
-                        </div>
-                        <div class="class-details">
-                            <button class="btn-more" aria-label="Learn more about Hatha Yoga">More</button>
-                            <p class="hidden-text" style="display: none;">
-                                Hatha Yoga focuses on physical postures (asanas), breathing (pranayama), and meditation to balance body and mind. It is ideal for beginners and promotes flexibility, strength, and relaxation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Class Item: Pilates Yoga -->
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="class-wrap">
-                    <div class="class-img">
-                        <img src="img/yoga2.jpg" alt="Pilates Yoga">
-                    </div>
-                    <div class="class-text" style="font-size: 14px;">
-                        <div class="class-teacher">
-                            <img src="img/profile.png" alt="Pilates Yoga Teacher">
-                            <h3>Reiki Yoga</h3>
-                            <a href="contact.html" aria-label="Contact for Pilates Yoga">+</a>
-                        </div>
-                        <div class="class-details">
-                            <button class="btn-more" aria-label="Learn more about Pilates Yoga">More</button>
-                            <p class="hidden-text" style="display: none;">
-                                Reiki Yoga combines Reiki healing energy with yoga poses to enhance relaxation and balance energy flow, promoting physical and emotional healing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Class Item: Vinyasa Yoga -->
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="class-wrap">
-                    <div class="class-img">
-                        <img src="img/yoga3.jpg" alt="Vinyasa Yoga">
-                    </div>
-                    <div class="class-text" style="font-size: 14px;">
-                        <div class="class-teacher">
-                            <img src="img/profile.png" alt="Vinyasa Yoga Teacher">
-                            <h3>Kundalini Yoga</h3>
-                            <a href="contact.html" aria-label="Contact for Vinyasa Yoga">+</a>
-                        </div>
-                        <div class="class-details">
-                            <button class="btn-more" aria-label="Learn more about Vinyasa Yoga">More</button>
-                            <p class="hidden-text" style="display: none;">
-                                Kundalini Yoga aims to awaken spiritual energy at the spine's base using postures, breathwork, chanting, and meditation for spiritual growth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Class Item: Yin Yoga -->
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-4 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="class-wrap">
-                    <div class="class-img">
-                        <img src="img/yoga4.jpg" alt="Yin Yoga">
-                    </div>
-                    <div class="class-text" style="font-size: 14px;">
-                        <div class="class-teacher">
-                            <img src="img/profile.png" alt="Yin Yoga Teacher">
-                            <h3>Kriya Yoga</h3>
-                            <a href="contact.html" aria-label="Contact for Yin Yoga">+</a>
-                        </div>
-                        <div class="class-details">
-                            <button class="btn-more" aria-label="Learn more about Yin Yoga">More</button>
-                            <p class="hidden-text" style="display: none;">
-                                Kriya Yoga emphasizes breath control, meditation, and discipline to purify the mind and body, promoting self-realization and inner peace.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Class Item: Ashtanga Yoga -->
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-5 wow fadeInUp" data-wow-delay="0.8s">
-                <div class="class-wrap">
-                    <div class="class-img">
-                        <img src="img/yoga5.jpg" alt="Ashtanga Yoga">
-                    </div>
-                    <div class="class-text" style="font-size: 14px;">
-                        <div class="class-teacher">
-                            <img src="img/profile.png" alt="Ashtanga Yoga Teacher">
-                            <h3>Acupressure Therapy</h3>
-                            <a href="contact.html" aria-label="Contact for Ashtanga Yoga">+</a>
-                        </div>
-                        <div class="class-details">
-                            <button class="btn-more" aria-label="Learn more about Ashtanga Yoga">More</button>
-                            <p class="hidden-text" style="display: none;">
-                                Acupressure applies pressure to specific body points (acupoints) to improve energy flow, reduce stress, and relieve pain, enhancing overall health.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Class Item: Power Yoga -->
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-6 wow fadeInUp" data-wow-delay="1s">
-                <div class="class-wrap">
-                    <div class="class-img">
-                        <img src="img/yoga6.jpg" alt="Power Yoga">
-                    </div>
-                    <div class="class-text" style="font-size: 14px;">
-                        <div class="class-teacher">
-                            <img src="img/profile.png" alt="Power Yoga Teacher">
-                            <h3>Breath works</h3>
-                            <a href="contact.html" aria-label="Contact for Power Yoga">+</a>
-                        </div>
-                        <div class="class-details">
-                            <button class="btn-more" aria-label="Learn more about Power Yoga">More</button>
-                            <p class="hidden-text" style="display: none;">
-                                Breathwork uses controlled breathing techniques to reduce stress, boost energy, and improve mental and physical health through methods like Pranayama or Holotropic Breathing.
-                            </p>
-                        </div>
-                    </div>
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="logo" />
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="price.html" class="nav-item nav-link">Plans</a>
+                    <a href="classes.html" class="nav-item nav-link active">Classes</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="reviews.html" class="nav-item nav-link">Reviews</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Class End -->
-        
-        
-        <!-- Discount Start >
-        <div class="discount wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 90px;">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Awesome Discount</p>
-                    <h2>Get <span>30%</span> Discount for all Classes</h2>
-                </div>
-                <div class="container discount-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
-                    </p>
-                    <a class="btn">Join Now</a>
-                </div>
-            </div>
-        </div>
-         Discount End -->
 
-
-<!-- Footer Start -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- About Section -->
-            <div class="col-lg-4 col-md-6">
-                
-                <p>Discover the path to wellness with us. Your yoga journey begins here.</p>
-                <p><i class="fas fa-map-marker-alt"></i><br> 204/3,<br> Dunupathagama,<br> Maho, <br>Kurunegala,<br>Sri Lanka.</p>
-                <p><i class="fas fa-phone-alt"></i> +94777748206</p>
-                <p><i class="fas fa-envelope"></i> indikayoga@gmail.com</p>
-            </div>
-            <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="price.html">Plans</a></li>
-                    <li><a href="classes.html">Classes</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </div>
-            <!-- Social Media -->
-            <div class="col-lg-3 col-md-6">
-                <h4>Follow Us</h4>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/share/1DGGQiJmzx/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/srilankanyoga_guru?utm_source=qr&igsh=MWxpZjg5cHhnamFmdA== "><i class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/@indikayoga1100?si=30Gb7tBPBZJkYiRD"><i class="fab fa-youtube"></i></a>
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Classes</h2>
                 </div>
-            </div>
-            <div class="col-lg-2 col-md-6">
-                <div class="footer-logo-container">
-                    <img src="img/YapahuwaYogaVilla.png" alt="Yoga Logo" class="footer-logo-image">
-                    
-                </div>
-            </div>
-            
-        </div>
-        <hr>
-        <!-- Copyright Section -->
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start">
-                <p>&copy; 2025 Yooga. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="com">Designed by <a class="company" href="#" target="_blank">ZigmaVision</a></p>
             </div>
         </div>
     </div>
-</footer>
-<!-- Footer End -->
-<!-- Footer End -->
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/isotope/isotope.pkgd.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
+    <div class="class">
+        <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>Our Classes</p>
+                <h2>Yoga Classes</h2>
+            </div>
 
-<!-- Contact Javascript File -->
-<script src="mail/jqBootstrapValidation.min.js"></script>
-<script src="mail/contact.js"></script>
+            <div class="row class-container">
+                <!-- Class Item: Hatha Yoga -->
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="img/yoga1.jpg" alt="Hatha Yoga">
+                            <button class="btn-more" onclick="toggleDescription(this)">More</button>
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="img/profile.png" alt="Hatha Yoga Teacher">
+                                <h3>Hatha Yoga</h3>
+                                <a href="contact.html">+</a>
+                            </div>
+                            <div class="class-details">
+                                <p class="hidden-text">
+                                    Hatha Yoga, one of the most practiced forms, emphasizes physical postures and breath control. In Sri Lanka, this practice is perfect for tourists looking for relaxation and rejuvenation, especially in serene settings such as the peaceful beaches or lush hill retreats. It’s an ideal starting point for those new to yoga, helping to improve flexibility and mental calmness while connecting with the island's natural beauty.                               </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+                <!-- Class Item: Reiki Yoga -->
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="img/yoga2.jpg" alt="Reiki Yoga">
+                            <button class="btn-more" onclick="toggleDescription(this)">More</button>
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="img/profile.png" alt="Reiki Yoga Teacher">
+                                <h3>Reiki Yoga</h3>
+                                <a href="contact.html">+</a>
+                            </div>
+                            <div class="class-details">
+                                <p class="hidden-text">
+                                    Reiki Yoga blends traditional yoga practices with energy healing techniques. In Sri Lanka, Reiki classes are offered in wellness centers and Ayurvedic resorts, where the ancient energy of the land complements the therapy. Tourists can enjoy a deep sense of relaxation and emotional healing, making it a unique and restorative experience while surrounded by Sri Lanka’s spiritual energy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<script>
-    // JavaScript for toggling "More" button
-    document.querySelectorAll('.btn-more').forEach(button => {
-        button.addEventListener('click', () => {
-            const hiddenText = button.nextElementSibling;
-            if (hiddenText.style.display === 'none' || !hiddenText.style.display) {
-                hiddenText.style.display = 'block';
-                button.textContent = 'Less';
+                <!-- Class Item: Kundalini Yoga -->
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="img/yoga3.jpg" alt="Kundalini Yoga">
+                            <button class="btn-more" onclick="toggleDescription(this)">More</button>
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="img/profile.png" alt="Kundalini Yoga Teacher">
+                                <h3>Kundalini Yoga</h3>
+                                <a href="contact.html">+</a>
+                            </div>
+                            <div class="class-details">
+                                <p class="hidden-text">
+                                    Kundalini Yoga is about awakening the dormant energy within through dynamic movements and breathwork. Sri Lanka, with its spiritual ambiance and tranquil landscapes, provides the perfect environment for this transformative practice. It is ideal for those seeking to enhance their spiritual awareness and embark on a journey of self-discovery amidst the island's sacred temples and serene retreats.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Item: Kriya Yoga -->
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="img/yoga4.jpg" alt="Kriya Yoga">
+                            <button class="btn-more" onclick="toggleDescription(this)">More</button>
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="img/profile.png" alt="Kriya Yoga Teacher">
+                                <h3>Kriya Yoga</h3>
+                                <a href="contact.html">+</a>
+                            </div>
+                            <div class="class-details">
+                                <p class="hidden-text">
+                                    Kriya Yoga combines meditation and breath control to reach higher states of consciousness. In Sri Lanka, tourists can engage in this disciplined practice in spiritual retreats surrounded by the island's natural beauty. It is an ideal practice for those who wish to dive deeper into meditation and experience profound mental clarity while exploring the cultural and spiritual heritage of Sri Lanka.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Item: Acupressure Therapy -->
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="img/yoga5.jpg" alt="Acupressure Therapy">
+                            <button class="btn-more" onclick="toggleDescription(this)">More</button>
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="img/profile.png" alt="Acupressure Therapy Teacher">
+                                <h3>Acupressure Therapy</h3>
+                                <a href="contact.html">+</a>
+                            </div>
+                            <div class="class-details">
+                                <p class="hidden-text">
+                                    Acupressure Therapy, based on Traditional Chinese Medicine, uses pressure points to release tension and promote healing. Sri Lanka's Ayurveda resorts often incorporate this therapy alongside yoga practices, offering tourists a holistic wellness experience. The peaceful settings of Sri Lanka enhance the benefits of acupressure, helping to relax the body and mind while immersed in the island’s healing environment.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Item: Breathwork -->
+                <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="class-wrap">
+                        <div class="class-img">
+                            <img src="img/yoga6.jpg" alt="Breathwork">
+                            <button class="btn-more" onclick="toggleDescription(this)">More</button>
+                        </div>
+                        <div class="class-text">
+                            <div class="class-teacher">
+                                <img src="img/profile.png" alt="Breathwork Teacher">
+                                <h3>Breathwork</h3>
+                                <a href="contact.html">+</a>
+                            </div>
+                            <div class="class-details">
+                                <p class="hidden-text">
+                                    Pranayama, or controlled breathing, is a core practice in yoga that helps manage energy flow and stress. Sri Lanka’s serene landscapes provide the ideal environment to practice breathwork, especially in tranquil locations like beaches or hilltops. Tourists can experience reduced stress, enhanced clarity, and improved lung capacity, all while benefiting from the calming atmosphere of the island.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle the description visibility when "More" button is clicked
+        function toggleDescription(button) {
+            var classDetails = button.closest('.class-item').querySelector('.hidden-text');
+            if (classDetails.style.display === "none" || classDetails.style.display === "") {
+                classDetails.style.display = "block";
+                button.textContent = "Less";
             } else {
-                hiddenText.style.display = 'none';
-                button.textContent = 'More';
+                classDetails.style.display = "none";
+                button.textContent = "More";
             }
-        });
-    });
-</script>
+        }
+    </script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    function toggleDescription(button) {
+        const classItem = button.closest('.class-item');
+        const classDetails = classItem.querySelector('.hidden-text');
+    
+        classItem.classList.toggle('expanded');  // Toggle 'expanded' class
+    
+        if (classItem.classList.contains('expanded')) {
+            button.textContent = "Less";  // Change button text to "Less"
+        } else {
+            button.textContent = "More";  // Change button text to "More"
+        }
+    }
+    </script>
+</body>
 
-
-    </body>
 </html>
-
