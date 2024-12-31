@@ -1643,11 +1643,11 @@ a:focus {
 .class .class-text {
     position: relative;
     padding: 5px 10px; /* Reduced padding */
-    border-radius: 50px;
+    border-radius: 10px;
     background: linear-gradient(rgba(9, 57, 28, 0.872), rgba(19, 123, 31, 0.7));
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.07); /* Subtle shadow */
     height: auto; /* Allow natural height adjustment based on content */
-    max-height: 80px; /* Maximum height to ensure it's not too tall */
+    max-height: 1000px; /* Maximum height to ensure it's not too tall */
    
 }
 
@@ -1709,6 +1709,12 @@ a:focus {
 .class .class-wrap:hover .class-teacher a {
     color: #F7CAC9;
     background: #314839;
+    
+}
+
+.class-details {
+    
+    border-radius: 10%;
 }
 
 .class .class-text button {
@@ -2664,7 +2670,7 @@ a:focus {
 }
 
 .btn-submit {
-    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    background-color: #00cc4e;
     color: white;
     border: none;
     border-radius: 8px;
@@ -2677,7 +2683,7 @@ a:focus {
 }
 
 .btn-submit:hover {
-    background: linear-gradient(120deg, #8fd3f4, #84fab0);
+    background-color: #6dacebbf;
     transform: translateY(-3px);
 }
 
@@ -3061,12 +3067,99 @@ hr {
 }
 
 
+/* Beautiful shaped "More" button */
+.btn-more {
+    background: linear-gradient(45deg, #3ce91a, #00cc4e);  /* Gradient background */
+    color: white; /* White text */
+    border: none;
+    padding: 5px 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 30px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;  /* Smooth transitions */
+}
+
+.btn-more:hover {
+    background: linear-gradient(45deg, #0066CC, #6699FF); /* Reversed gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+.btn-more:focus {
+    outline: none; /* Remove focus outline */
+}
 
 
+/* Expandable description container */
+.class-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;  /* Border for the class item */
+    border-radius: 10px;  /* Rounded corners */
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hidden description initially */
+.hidden-text {
+    display: none;
+    padding-top: 0px;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #ffffff;
+    max-height: 400px;  /* Set a default height */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;  /* Smooth expansion */
+}
+
+/* When description is expanded */
+.class-item.expanded .hidden-text {
+    display: block;
+    max-height: 1000px;  /* Allow more height */
+}
 
 
+.contact .container {
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .col-md-6 {
+    width: 78%; /* Adjust width for two equal columns */
+    margin-bottom: 20px;
+}
+
+.contact img {
+    width: 150%; /* Ensures the image is responsive */
+    height: 100%;
+}
 
 
+/* Success message */
+.message.success {
+    background-color: #c6e2c7; /* Green background */
+    color: rgb(17, 1, 1); /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #388E3C; /* Darker green border */
+}
+
+/* Error message */
+.message.error {
+    background-color: #F44336; /* Red background */
+    color: red; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D32F2F; /* Darker red border */
+}
 
 
 

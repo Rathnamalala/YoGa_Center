@@ -34,6 +34,9 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+            
+        </style>
     </head>
 
     <body>
@@ -134,82 +137,58 @@ aria-label="Chat with us on WhatsApp">
 
 
         <!-- Contact Start -->
-        <div class="contact">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Get In Touch</p>
-                    <h2>For Any Query</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-md-4 contact-item wow zoomIn" data-wow-delay="0.2s">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="contact-text">
-                                    <h2>Location</h2>
-                                    <p>123, Maho, Kurunegala</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 contact-item wow zoomIn" data-wow-delay="0.4s">
-                                <i class="fa fa-phone-alt"></i>
-                                <div class="contact-text">
-                                    <h2>Phone</h2>
-                                    <p> 075 5714456</p>
-
-                                    <p>+012 345 6789</p>
-
-                                </div>
-                            </div>
-                            <div class="col-md-4 contact-item wow zoomIn" data-wow-delay="0.6s">
-                                <i class="far fa-envelope"></i>
-                                <div class="contact-text">
-                                    <h2>Email</h2>
-                                    <p>info@example.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="contact-form">
-                            <div id="message" class="message"></div>
-                            <div id="success"></div>
-                            <form name="sentMessage" method="post" action="send-email.php">
-                                <h2>Contact Us</h2>
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" placeholder="Your Name" required>
-                                </div>
-                    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email" required>
-                                </div>
-                    
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                                </div>
-                    
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                                </div>
-                    
-                                <div class="form-group">
-                                    <button type="submit" class="btn-submit">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+<div class="contact">
+    <div class="container">
+        
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Get In Touch</p>
+            <h2>For Any Query</h2>
         </div>
 
-      
-             
-          
-        <!-- Contact End -->
+        <div class="row">
+            <!-- Left Side: Contact Form -->
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="contact-form">
+                    <div id="message" class="message"></div>
+                    <div id="success"></div>
+                    <form name="sentMessage" method="post" action="send-email.php">
+                        <h2>Contact Us</h2>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-md-6">
+                <img src="img/sri-lanka-yoga1.jpg" class="img-fluid rounded" alt="Gallery Image 3">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
 
 
       <!-- Footer Start -->
@@ -260,7 +239,7 @@ aria-label="Chat with us on WhatsApp">
                 <p>&copy; 2025 Yooga. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <p class="com">Designed by <a class="company" href="#" target="_blank">ZigmaVision</a></p>
+                <p class="com">Designed by <a class="company" href="www.zigmavision.com" target="_blank">ZigmaVision</a></p>
             </div>
         </div>
             
@@ -318,7 +297,7 @@ aria-label="Chat with us on WhatsApp">
                 const messageDiv = document.getElementById("message");
         
                 if (status === "success") {
-                    messageDiv.textContent = "Your message has been sent successfully.";
+                    messageDiv.textContent = "-----Your message has been sent.Thank You-----";
                     messageDiv.className = "message success";
                     messageDiv.style.display = "block";
                 } else if (status === "error") {
