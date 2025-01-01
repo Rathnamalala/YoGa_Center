@@ -2332,8 +2332,9 @@ a:focus {
     background-color: #ffffff;
     padding: 40px 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 150%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 250%;
+    height: 75%;
     max-width: 1000px;
     animation: fadeIn 1s ease;
     border: #00cc4e solid 2px;
@@ -2390,6 +2391,58 @@ a:focus {
 .contact-text {
      font-weight: bold;
 }
+
+.contact .container {
+    width: 150%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .col-md-6 {
+    width: 100%; /* Adjust width for two equal columns */
+    height: 75%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.stacked-image {
+    display: block;
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.contact img {
+    width: 110%; /* Ensures the image is responsive */
+    
+    border-radius: 3%;
+}
+
+
+/* Success message */
+.message.success {
+    background-color: #c6e2c7; /* Green background */
+    color: rgb(17, 1, 1); /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #388E3C; /* Darker green border */
+}
+
+/* Error message */
+.message.error {
+    background-color: #F44336; /* Red background */
+    color: red; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D32F2F; /* Darker red border */
+}
+
+
 
 /*******************************/
 /******* Single Post CSS *******/
@@ -2705,52 +2758,6 @@ a:focus {
     .btn-submit {
         font-size: 14px;
     }
-}
-
-
-.contact .container {
-    width: 150%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.contact .col-md-6 {
-    width: 100%; /* Adjust width for two equal columns */
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.contact img {
-    width: 160%; /* Ensures the image is responsive */
-    height: 100%;
-    border-radius: 3%;
-}
-
-
-/* Success message */
-.message.success {
-    background-color: #c6e2c7; /* Green background */
-    color: rgb(17, 1, 1); /* White text */
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #388E3C; /* Darker green border */
-}
-
-/* Error message */
-.message.error {
-    background-color: #F44336; /* Red background */
-    color: red; /* White text */
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #D32F2F; /* Darker red border */
 }
 
 
