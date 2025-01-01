@@ -2412,10 +2412,7 @@ a:focus {
     justify-content: flex-start;
     align-items: flex-start;
 }
-.stacked-image {
-    display: block;
-    margin-bottom: 10px; /* Adjust spacing as needed */
-}
+
 
 .contact img {
     width: 110%; /* Ensures the image is responsive */
