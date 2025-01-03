@@ -21,11 +21,11 @@ $mail->Host = "smtp.gmail.com"; // Updated SMTP host
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // STARTTLS encryption
 $mail->Port = 587; // Port for STARTTLS
 
-$mail->Username = "kanchanasaranga11@gmail.com";
-$mail->Password = "bvikpzytxegjbkme"; // Ensure your app password is correct
+$mail->Username = "indikayoga@gmail.com";
+$mail->Password = "lxyseimaszuzuare"; // Ensure your app password is correct
 
 $mail->setFrom($email, $name);
-$mail->addAddress("kanchanasaranga33@gmail.com", "Dave");
+$mail->addAddress("indikayoga@gmail.com", "Indika");
 
 $mail->Subject = $subject;
 $mail->Body = $message;
