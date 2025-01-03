@@ -277,5 +277,43 @@ aria-label="Chat with us on WhatsApp">
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+<script>// Wait until the DOM is ready
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select the form and message placeholder
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewMessage = document.getElementById('reviewMessage');
+    
+        // Handle form submission with AJAX
+        reviewForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+    
+            // Get form data
+            const formData = new FormData(reviewForm);
+    
+            // Use Fetch API to send the form data to the server
+            fetch('submit-review.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display success or error message based on response
+                if (data.status === 'success') {
+                    reviewMessage.style.display = 'block';
+                    reviewMessage.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+                    reviewForm.reset(); // Reset form fields
+                } else {
+                    reviewMessage.style.display = 'block';
+                    reviewMessage.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+                }
+            })
+            .catch(error => {
+                reviewMessage.style.display = 'block';
+                reviewMessage.innerHTML = `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
+            });
+        });
+    });
+    </script>
+
     </body>
 </html>

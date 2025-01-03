@@ -19,14 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP host
         $mail->SMTPAuth = true;
 
-        $mail->Username = "kanchanasaranga11@gmail.com";
-        $mail->Password = "bvikpzytxegjbkme"; // Ensure your app password is correct
+        $mail->Username = "indikayoga@gmail.com";
+        $mail->Password = "lxyseimaszuzuare"; // Ensure your app password is correct
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Sender and recipient settings
         $mail->setFrom($email, $name);
-        $mail->addAddress("kanchanasaranga33@gmail.com", "Dave");
+        $mail->addAddress("indikayoga@gmail.com", "IndikaYoga");
 
         // Email content
         $mail->isHTML(true);
