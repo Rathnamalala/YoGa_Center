@@ -1430,7 +1430,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
-    background: url('../img/yoga1.jpg') no-repeat center center; /* Update the path to your local image */
+    background: url('../img/yoga1.webp') no-repeat center center; /* Update the path to your local image */
     background-size: cover; /* Ensures the image covers the entire section */
     color: #ffffff; /* Text color to contrast with background */
     overflow: hidden; /* Ensures the overlay stays contained */
@@ -2887,7 +2887,7 @@ a:focus {
 /* Footer Styles */
 .footer {
     background: linear-gradient(rgba(0, 25, 12, 0.458), rgb(1, 28, 14)), 
-    url('../img/footer.jpg') no-repeat center center;
+    url('../img/footer.webp') no-repeat center center;
     background-size: cover;
     background-position: center 0px; /* Adjust the vertical position */
     color: #e5e5e5;
